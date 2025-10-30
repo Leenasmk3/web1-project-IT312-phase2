@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sanad - Services</title>
+
+  <!-- هنا السطر المهم للربط مع ملف CSS -->
+  <link rel="stylesheet" href="css/style.css"> 
+</head>
+
+<body>
+  <!-- شريط التنقل -->
+  <header class="navbar">
+    <div class="nav-container">
+	
+      <div class="nav-logo">
+      <a href="index.html">
+		<img src="images/sanad.png" alt="sanad logo">
+	  </a>
+    </div>
+	
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="services.html" class="current">Services</a>
+        <a href="customer-dashboard.html">Customer</a>
+        <a href="provider-dashboard.html">Service Provider</a>
+        <a href="about.html">About Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="nav-line"></div>
+
+
+	<nav class="breadcrumbs dark">
+		<ol class="trail nav-container">
+			<li><a href="index.html">Home</a></li>
+			<li>Services</li>
+		</ol>
+    </nav>
+	
+	
+	
+<main class="container">
+
+    <section class="services-layout">
+      <!-- صندوق الفرز -->
+      <aside class="sort-box">
+        <label for="sort" class="sort-label">Sort by</label>
+        <select id="sort" name="sort" class="sort-select">
+          <optgroup label="Name">
+            <option value="az">A : Z</option>
+            <option value="za">Z : A</option>
+          </optgroup>
+          <optgroup label="Price">
+            <option value="plh">LOW : HIGH</option>
+            <option value="phl">HIGH : LOW</option>
+          </optgroup>
+        </select>
+      </aside>
+
+      <!-- المحتوى -->
+      <div class="content">
+
+        <!-- Public Services -->
+        <section class="category">
+          <h2 class="cards-title">Public Services</h2>
+          <div class="cards">
+            
+            <!-- كرت 1 -->
+            <article class="service-card">
+              <img src="images/facilities(in-person).jpg" alt="Facilities (In-person)">
+              <div class="card-header">
+                <p class="row name-row">
+                  <span class="label">Name:</span>
+                  <span class="value">Facilities (In-person)</span>
+                </p>
+                <span class="price-badge">120SR</span>
+              </div>
+              <p class="row">
+                <span class="label">Description:</span>
+                Assistance inside public facilities and venues with inclusive access.
+              </p>
+              <button class="btn btn-dark">Request</button>
+            </article>
+
+            <!-- كرت 2 -->
+            <article class="service-card">
+              <img src="images/facilities(online).jfif" alt="Facilities (Online)">
+              <div class="card-header">
+                <p class="row name-row">
+                  <span class="label">Name:</span>
+                  <span class="value">Facilities (Online)</span>
+                </p>
+                <span class="price-badge">80SR</span>
+              </div>
+              <p class="row">
+                <span class="label">Description:</span>
+                Remote guidance for bookings, forms, and accessibility inquiries.
+              </p>
+              <button class="btn btn-dark">Request</button>
+            </article>
+
+            <!-- كرت 3 -->
+            <article class="service-card">
+              <img src="images/Delivery.jfif" alt="Delivery Services">
+              <div class="card-header">
+                <p class="row name-row">
+                  <span class="label">Name:</span>
+                  <span class="value">Delivery Services</span>
+                </p>
+                <span class="price-badge">35SR</span>
+              </div>
+              <p class="row">
+                <span class="label">Description:</span>
+                Safe delivery of essentials and assistive items to your door.
+              </p>
+              <button class="btn btn-dark">Request</button>
+            </article>
+
+            <!-- كرت 4 -->
+            <article class="service-card">
+              <img src="images/AssistiveTools.jfif" alt="Assistive Tools">
+              <div class="card-header">
+                <p class="row name-row">
+                  <span class="label">Name:</span>
+                  <span class="value">Assistive Tools</span>
+                </p>
+                <span class="price-badge">80SR</span>
+              </div>
+              <p class="row">
+				<span class="label">Description:</span>
+                Devices and equipment that support independence and daily tasks.
+              </p>
+              <button class="btn btn-dark">Request</button>
+            </article>
+
+            <!-- كرت 5 -->
+            <article class="service-card">
+              <img src="images/Consultations.jfif" alt="Consultations">
+              <div class="card-header">
+                <p class="row name-row">
+                  <span class="label">Name:</span>
+                  <span class="value">Consultations</span>
+                </p>
+                <span class="price-badge">95SR</span>
+              </div>
+              <p class="row">
+                <span class="label">Description:</span>
+                Expert advice to choose the right services and accessibility plans.
+              </p>
+              <button class="btn btn-dark">Request</button>
+            </article>
+
+            <!-- كرت 6 -->
+            <article class="service-card">
+              <img src="images/LearningCourses.jfif" alt="Learning Courses">
+              <div class="card-header">
+                <p class="row name-row">
+                  <span class="label">Name:</span>
+                  <span class="value">Learning Courses</span>
+                </p>
+                <span class="price-badge">100SR</span>
+              </div>
+              <p class="row">
+                <span class="label">Description:</span>
+                Inclusive training and awareness sessions for skills development.
+              </p>
+              <button class="btn btn-dark">Request</button>
+            </article>
+          </div>
+        </section>
+
+        <hr class="divider">
+
+        <!-- Hearing impairment -->
+        <section class="category">
+          <h2 class="cards-title">Hearing impairment services</h2>
+          <div class="cards">
+            <article class="service-card">
+              <img src="images/SignInterpreter(Online).jfif" alt="Sign Interpreter (Online)">
+              <div class="card-header">
+                <p class="row name-row">
+                  <span class="label">Name:</span>
+                  <span class="value">Sign Interpreter (Online)</span>
+                </p>
+                <span class="price-badge">65SR</span>
+              </div>
+              <p class="row">
+                <span class="label">Description:</span>
+                Instant remote interpretation via certified sign language experts.
+              </p>
+              <button class="btn btn-dark">Request</button>
+            </article>
+
+            <article class="service-card">
+              <img src="images/SignInterpreter(In-person).jfif" alt="Sign Interpreter (In-person)">
+              <div class="card-header">
+                <p class="row name-row">
+                  <span class="label">Name:</span>
+                  <span class="value">Sign Interpreter (In-person)</span>
+                </p>
+                <span class="price-badge">120SR</span>
+              </div>
+              <p class="row">
+                <span class="label">Description:</span>
+                On-site interpreting for clinics, meetings, and official visits.
+              </p>
+              <button class="btn btn-dark">Request</button>
+            </article>
+          </div>
+        </section>
+
+        <hr class="divider">
+
+        <!-- الصف الأخير -->
+        <div class="last-row">
+          <section class="category first">
+            <h2 class="cards-title">Visual impairment Services</h2>
+            <div class="cards">
+              <article class="service-card">
+                <img src="images/ReadingAssistance.jfif" alt="Reading Assistance">
+                <div class="card-header">
+                  <p class="row name-row">
+                    <span class="label">Name:</span>
+                    <span class="value">Reading Assistance</span>
+                  </p>
+                  <span class="price-badge">45SR</span>
+                </div>
+                <p class="row">
+                  <span class="label">Description:</span>
+					Support to read books and official documents in accessible formats.
+                </p>
+                <button class="btn btn-dark">Request</button>
+              </article>
+            </div>
+          </section>
+
+          <section class="category">
+            <h2 class="cards-title">Physical Disability services</h2>
+            <div class="cards">
+              <article class="service-card">
+                <img src="images/AccessibleTransportation.jfif" alt="Accessible Transportation">
+                <div class="card-header">
+                  <p class="row name-row">
+                    <span class="label">Name:</span>
+                    <span class="value">Accessible Transportation</span>
+                  </p>
+                  <span class="price-badge">67SR</span>
+                </div>
+                <p class="row">
+                  <span class="label">Description:</span>
+                  Wheelchair-friendly vans for safe and comfortable mobility.
+                </p>
+                <button class="btn btn-dark">Request</button>
+              </article>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+      
+  
+  <!-- Footer -->
+  <footer class="site-footer">
+    <!-- راح نضيفه لاحقاً -->
+  </footer>
+
+</body>
+</html>
