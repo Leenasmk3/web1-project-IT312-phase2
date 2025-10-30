@@ -1,0 +1,573 @@
+/* ========== Sanad Website Style ========== */
+
+/* ألوان وتنسيق عام */
+body {
+  background-color: #fff;   
+  color: #0d1b2a;             /* لون النص */
+  font-family: serif, Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* العناوين */
+h1, h2, h3 {
+  color: #1a4b8f;             /* أزرق غامق */
+}
+
+/* الروابط */
+a {
+  color: #1a4b8f;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #2962c2;             /* أزرق أفتح عند المرور */
+}
+
+/* الإطارات والفواصل */
+hr {
+  border: 1px solid #c8d7eb;  /* رمادي مزرق */
+}
+
+/* الأزرار */
+button {
+  background-color: #1a4b8f;  /* أزرق غامق */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2962c2;  /* أزرق أفتح */
+}
+
+
+
+/* الصور */
+.nav-logo img {
+  height: 55px;
+  width: auto;
+}
+
+.nav-logo a {
+	display: inline-block;
+	text-decoration: none;
+}
+
+
+
+
+
+
+
+/* ===== Navbar based on wireframe ===== */
+.navbar {
+  background-color: #eef5ff; 
+  border-bottom: 1px solid #000000;
+  font-family: serif, sans-serif;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.5rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* شعار Sanad */
+.nav-logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+}
+
+/* الروابط */
+.nav-links {
+ margin-left:auto ;
+  display: flex;
+  gap: 25px; 
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  padding: 0.5rem 3rem;
+  border-bottom: 2px solid transparent;
+  transition: 0.2s;
+  letter-spacing: .5px;
+  word-spacing: 4px ;
+}
+
+.nav-links a.current {
+  border-bottom: 2px solid #000;
+  font-weight: 600;
+  pointer-events: none;
+  cursor: default;
+}
+
+/* عند المرور hover */
+.nav-links a:hover {
+  border-bottom: 2px solid #000;
+}
+
+/* الصفحة الحالية */
+.nav-links a.current {
+  border-bottom: 2px solid #000;
+  font-weight: 600;
+  
+}
+
+/* الخط الغامق تحت الشريط */
+.nav-line {
+  height: 5px;
+  background-color: #1a4b8f;
+}
+
+.nav-links a + a {
+	border-left: 1px solid #cfcfcf ;
+}
+
+
+
+/* ===== Breadcrumb Dark Style ===== */
+.breadcrumbs.dark {
+  background-color: #062c6d; 
+  padding: 0.25rem 0;
+  color: #fff;
+}
+
+.breadcrumbs.dark .trail {
+  display: flex;
+  gap: .5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0 1.5rem;
+  font-size: 15px;
+}
+
+.breadcrumbs.dark .trail li+li::before {
+  content: ">";
+  color: #fff;
+  margin: 0 .4rem;
+}
+
+.breadcrumbs.dark a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.breadcrumbs.dark a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumbs.dark .current {
+  font-weight: 700;
+  color: #fff;
+}
+
+
+
+
+/* ===== Shahd ===== */
+
+
+/* ===== Services layout (sidebar + grid) ===== */
+.container { max-width: 1200px; margin: 24px auto 40px; padding: 0 16px; }
+
+.services-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 28px;
+}
+
+/* Sort box*/
+
+.sort-box {
+  width: 300px;       
+  background: #e7f1fb;
+  border: 1px solid #bad3f2;
+  border-radius: 10px;
+  padding: 14px;
+  text-align: left;
+}
+
+/* النص */
+.sort-label {
+  display: block;
+  white-space: nowrap;
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #1a4b8f;
+}
+
+/* القائمة */
+.sort-select {
+  display: block;
+  width: 100%;             
+  height: 28px;             
+  padding: 4px 8px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1a4b8f;
+  background: #f5f9ff;
+  border: 1px solid #bad3f2;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+
+.service-card {
+  background: #fff;
+  border: 1px solid #dcdcdc;
+  padding: 10px;
+  width: 30%;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.service-card .row{
+	text-align: left;
+	margin: 10px 0;		
+}
+
+.label{
+	font-weight: bold;
+	display: inline-block;
+	width: auto;
+	margin-right: 4px;
+}
+
+.service-card p{
+	text-align: left;
+	color: #333;
+}
+
+.service-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 5px;
+  border-radius: 10px;
+}
+
+/* السعر */
+.price-badge {
+  background: #f1f1f1;
+  color: #1a4b8f;
+  padding: 4px 8px;
+  font-weight: bold;
+  font-size: 13px;
+  border-radius: 6px;
+}
+
+.last-row{
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	gap: 30px;
+	margin-top: 30px;
+	padding-top: 30px;
+}
+
+.cards-title{
+	text-align: center;
+	width: 100%;
+}
+
+.last-row .cards-title{
+	text-align: center;
+	font-size: 22px;
+	font-weight: bold;
+	margin-bottom: 15px;
+}
+
+.last-row .category{
+	flex: 1;
+}
+
+.last-row .service-card{
+	width: 80%;
+	margin: 0 auto;
+}
+
+.category.first{
+	position: relative;
+	padding-right: 30px;
+	margin-right: 30px;
+}
+
+.category.first::after{
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 2px;
+	height: 100%;
+	background-color: #ccc;
+}
+
+/* Button */
+.btn.btn-dark {
+  display: block;
+  width: 90%;               
+  margin: 10px auto 0;     
+  background-color: #1a4b8f; 
+  color: #fff;
+  border: none;
+  border-radius: 8px;        
+  padding: 8px 0;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.btn.btn-dark:hover{
+	background: #2962c2;
+}
+
+/* العنوان + السعر بجنب بعض */
+.card-header {
+  display: flex;
+  justify-content: space-between;  
+  align-items: center;
+  margin-top: 8px;
+  margin-bottom: 6px;
+}
+
+
+/* الاسم */
+.name-row {
+  margin: 0;
+  font-weight: bold;
+  color: #222;
+}
+
+
+
+/* ===== About Page ===== */
+
+
+/* Divider line */
+.divider {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 1.5rem 0;
+}
+
+
+/* ----- About intro section ----- */
+.about-intro {
+  background-color: #eef5ff;
+  border-radius: 3px;
+  padding: 1rem 1.5rem;
+  width: 95%;
+  margin: 1rem auto;
+}
+
+.about-intro p {
+  font-size: 1.5rem;     
+  line-height: 1.8;      
+  text-align: center;    
+  color: #0b2c48;        
+}
+
+/* ----- Team Section ----- */
+
+/* ====== قسم الفريق ====== */
+
+
+.team-section {
+  position: relative;
+}
+
+
+.team-header {
+  position: relative;
+  margin: 0 5% 1rem;
+}
+
+.more-btn {
+  position: absolute;
+  right: 0;               
+  top: 0;                 
+  background-color: #0b3b8a;
+  color: #fff;
+  padding: 0.5rem 1.2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.more-btn:hover {
+  background-color: #062c6d;
+}
+
+
+.team-section h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #0c468b;
+}
+
+/* الشبكة */
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  align-items: stretch;
+}
+
+/* البطاقة */
+.member-card {
+  background: #fff;
+  border: 1px solid #cce0ff;
+  border-radius: 10px;
+  width: 270px;
+  padding: 9px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 51, 102, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+/* الصورة */
+.thumb {
+  width: 100%;
+  height: 150px;
+  display: block;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #cce0ff;
+  margin-bottom: .5rem;
+}
+
+/* النص داخل البطاقة */
+.member-bio {
+  font-size: 0.95rem;
+  color: #000;
+  margin: .3rem 0;
+  text-align: center;
+}
+
+/* الرابط على الاسم */
+.member-bio a {
+  display: block;                
+  background-color: #0b3b8a;     
+  color: #fff;                  
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.05rem;
+  border-radius: 5px;
+  padding: 0.5rem 0;
+  width: 90%;                  
+  margin: 0 auto; 
+  text-align: center;
+}
+
+.member-bio a:hover {
+  text-decoration: underline;
+  color: #062c6d;
+}
+
+/* ===== Join Our Team Section ===== */
+
+
+.join-section h2 {
+  text-align: center;
+  margin: 1.5rem 0 1rem;
+}
+
+/* الهيكل العام للنموذج */
+.join-form {
+  background: #f7f7f7;
+  border: 1px solid #d4d4d4;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  max-width: 900px;
+  margin: 0 auto;
+
+  display: flex;               /* استخدام Flexbox بدل Grid */
+  flex-wrap: wrap;             /* يخلي العناصر تنتقل لسطر جديد إذا امتلأ السطر */
+  justify-content: space-between; /* توزيع متساوي بين العناصر */
+  gap: 1rem;                   /* مسافة بين الحقول */
+}
+
+/* كل label (النص + الحقل) */
+.join-form label {
+  display: flex;
+  flex-direction: column;      /* يخلي النص فوق الحقل */
+  flex: 0 0 48%;               /* كل عنصر ياخذ تقريباً نصف العرض */
+  font-weight: 600;
+  color: #094b8f;
+}
+
+/* تنسيق الحقول */
+.join-form input,
+.join-form textarea {
+  padding: 0.6rem;
+  border: 1px solid #cfcfcf;
+  border-radius: 6px;
+  background: #fff;
+}
+
+/* حقل الرسالة يأخذ عرض كامل */
+.join-form .full {
+  flex: 0 0 100%;
+}
+
+/* الزر في المنتصف */
+.join-form button {
+  background-color: #0b3b8a;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.3rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 1rem auto 0;
+  display: block;
+  width: 40%;
+}
+
+.join-form button:hover {
+  background-color: #062c6d;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+  .services-layout { flex-direction: column; }
+  .sort-box { width: 100%; }
+  .cards { justify-content: center; }
+  .service-card { max-width: 100%; }
+  .join-form {grid-template-columns: 1fr;}
+  .member-card {width: 90%;}
+  .join-form label {flex: 0 0 100%; }
+  .join-form button {width: 60%;}
+
+/* ===== Shahd ===== */
+
