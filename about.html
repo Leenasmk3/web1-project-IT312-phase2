@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sanad - aboutUs</title>
+
+  <!-- هنا السطر المهم للربط مع ملف CSS -->
+  <link rel="stylesheet" href="css/style.css"> 
+</head>
+
+<body>
+  <!-- شريط التنقل -->
+  <header class="navbar">
+    <div class="nav-container">
+	
+    <div class="nav-logo">
+      <a href="index.html">
+		<img src="images/sanad.png" alt="sanad logo">
+	  </a>
+    </div>
+	  
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="customer-dashboard.html">Customer</a>
+        <a href="provider-dashboard.html">Service Provider</a>
+        <a href="about.html" class="current">About Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="nav-line"></div>
+
+	<nav class="breadcrumbs dark">
+		<ol class="trail nav-container">
+			<li><a href="index.html">Home</a></li>
+			<li>About Us</li>
+		</ol>
+	</nav>
+
+  <main class="about-page">
+
+    <h1>About Us</h1>
+
+    <!-- Intro -->
+    <section class="about-intro">
+      <p>
+        <strong>Sanad</strong> is a student project that connects customers with supportive accessibility services.
+        Our team focuses on simple, friendly interfaces and inclusive design for everyone.
+      </p>
+    </section>
+
+    <hr class="divider">
+
+    <!-- Team Members -->
+    <section class="team-section">
+	
+	<div class="team=header">
+      <h2 id="team-title">Team Members</h2>
+	  <a href="team.html" class="more-btn">More</a>
+	</div>  
+	  
+      <div class="team-grid">
+         
+
+        <!-- Member 1 -->
+        <article class="member-card">
+          <img class="thumb" src="images/shahd.jpg" alt="Shahd photo">
+          <p class="member-bio">
+            <strong><a href="profile-shahd.html">Shahd</a></strong>
+          </p>
+          <p class="member-bio">Supervises and coordinates all accessibility services provided through the Sanad platform, ensuring quality and inclusivity for users with different disabilities.</p>
+        </article>
+
+        <!-- Member 2 -->
+        <article class="member-card">
+          <img class="thumb" src="images/mohamad.jpg" alt="Mohamad photo">
+          <p class="member-bio">
+            <strong><a href="profile-mohamad.html">Mohamad</a></strong>
+          </p>
+          <p class="member-bio">Manages the technical infrastructure of the website and oversees the development of online service tools and user support systems.</p>
+        </article>
+
+        <!-- Member 3 -->
+        <article class="member-card">
+          <img class="thumb" src="images/sara.webp" alt="Sara photo">
+          <p class="member-bio">
+            <strong><a href="profile-sara.html">Sara</a></strong>
+          </p>
+          <p class="member-bio">Builds partnerships with disability centers and organizations, and manages communication between users and service providers.</p>
+        </article>
+
+      </div>
+    </section>
+
+    <hr class="divider">
+
+     <!-- قسم انضم إلى فريقنا -->
+  <section class="join-section">
+    <h2>Join Our Team</h2>
+
+      <form class="join-form" action="#" method="post" enctype="multipart/form-data">
+      <label>
+        Name
+        <input type="text" name="name" placeholder="Enter your name" required>
+      </label>
+
+      <label>
+        Area of Expertise
+        <input type="text" name="expertise" placeholder="Enter your area of expertise">
+      </label>
+
+      <label class="file-field">
+        Profile Photo
+        <input type="file" name="photo" accept="image/*">
+      </label>
+
+      <label>
+        Skills
+        <input type="text" name="skills" placeholder="Enter your skills">
+      </label>
+
+      <label>
+        Date of Birth
+        <input type="date" name="dob">
+      </label>
+
+      <label>
+        Education
+        <input type="text" name="education" placeholder="Enter your education">
+      </label>
+
+      <label>
+        Email
+        <input type="email" name="email" placeholder="Enter your email" required>
+      </label>
+
+      <label class="full">
+        Message
+        <textarea name="message" rows="4" placeholder="Enter your message"></textarea>
+      </label>
+
+      <div class="form-actions full">
+        <button type="submit" class="btn btn-dark">Submit</button>
+      </div>
+    </form>
+  </section>
+
+  </main>
+
+  <!-- Footer -->
+ <!-- ===== Footer ===== -->
+  <footer class="footer">
+    
+  </footer>
+</body>
+</html>
