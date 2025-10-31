@@ -179,6 +179,59 @@ button:hover {
 
 
 
+
+
+
+/* ===== We Care Section with an iframe map ===== */
+.wecare {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+  background: #f8fafd;
+}
+
+.wecare h2 {
+  color: #114083;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.map {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 1.5rem;
+}
+
+.map iframe {
+  width: 100%;
+  height: 400px;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px #0001;
+}
+
+.wecare a {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: .8rem 1.5rem;
+  background: #1a4b8f;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: .3s;
+}
+
+.wecare a:hover {
+  background: #2962c2;
+}
+
+
 /* ===== Shahd ===== */
 
 
