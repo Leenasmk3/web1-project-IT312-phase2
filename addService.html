@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add a New Service</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+  <!-- شريط التنقل -->
+  <header class="navbar">
+    <div class="nav-container">
+	
+      <div class="nav-logo">
+      <a href="index.html">
+		<img src="images/sanad.png" alt="sanad logo">
+	  </a>
+    </div>
+	
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="services.html" class="border-left">Services</a>
+        <a href="customer-dashboard.html " class="border-left">Customer</a>
+        <a href="provider-dashboard.html" class="current border-left">Service Provider</a>
+        <a href="about.html" class="border-left">About Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="nav-line"></div>
+
+
+	<nav class="breadcrumbs dark">
+		<ol class="trail nav-container">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="provider-dashboard.html">Service Provider</a></li>
+			<li>Add a New Service</li>
+			
+		</ol>
+    </nav>
+
+
+
+  <section class="join-section">
+    <h2>Add a New Service </h2>
+     
+    <form  class="addService-form" action= "addService.HTML" method="POST" enctype="multipart/form-data">
+    
+        <div class="form-header">
+		 <a href="provider-dashboard.html" class="close-btn" >×</a>
+        </div>
+
+        <label>
+        Name
+        <input type="text" name="name" placeholder="Enter your name" required>
+      </label>
+	  
+	  <label class="file-field">
+        Photo
+        <input type="file" name="photo" accept="image/*">
+      </label>
+
+ <label>
+        Price
+        <input type="text" name="Price" placeholder="Enter the price of the service" required>
+      </label>
+	  
+
+<label class="full">
+        Description
+        <textarea name="message" rows="4" placeholder="Add the description of the service" required></textarea>
+      </label>
+
+      <div class="form-actions full">
+        <button type="submit" class="btn btn-dark">Submit</button>
+      </div>
+
+         
+     
+    </form>
+  </section>
+
+
+</body>
+</html>
