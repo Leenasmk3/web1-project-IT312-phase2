@@ -327,6 +327,11 @@ button:hover {
 	height: 100%;
 	background-color: #ccc;
 }
+.stars {
+  color: #ff7b00; /* Orange accent color */
+  margin-top: 5px;
+}
+
 
 /* Button */
 .btn.btn-dark {
@@ -377,7 +382,7 @@ button:hover {
 
 
 /* ----- About intro section ----- */
-.about-intro {
+.about-intro, .vision-text {
   background-color: #eef5ff;
   border-radius: 3px;
   padding: 1rem 1.5rem;
@@ -385,11 +390,22 @@ button:hover {
   margin: 1rem auto;
 }
 
-.about-intro p {
+.about-intro p, .vision-text p {
   font-size: 1.5rem;     
   line-height: 1.8;      
   text-align: center;    
   color: #0b2c48;        
+}
+
+.vision-logo {
+  flex: 1;
+  height: 120px;
+  width: 120px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  object-fit: contain;
+  border-radius: 8px;
 }
 
 /* ----- Team Section ----- */
