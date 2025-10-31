@@ -435,7 +435,7 @@ button:hover {
 
 
 /* ----- About intro section ----- */
-.about-intro {
+.about-intro, .vision {
   background-color: #eef5ff;
   border-radius: 3px;
   padding: 1rem 1.5rem;
@@ -443,7 +443,7 @@ button:hover {
   margin: 1rem auto;
 }
 
-.about-intro p {
+.about-intro p, .vision p{
   font-size: 1.5rem;     
   line-height: 1.8;      
   text-align: center;    
