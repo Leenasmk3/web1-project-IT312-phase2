@@ -177,10 +177,69 @@ button:hover {
 }
 
 
+/* ===== Home Page Services Hover Effect ===== */
+.service-home {
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-home:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(44, 90, 160, 0.2);
+}
+
+.service-home .hover-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(26, 75, 143, 0.9); /* Dark blue */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+  padding: 15px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.service-home:hover .hover-info {
+  opacity: 1;
+}
 
 
 
+/* REVIEWS SECTION */
+.reviews {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px 50px;
+  background-color: #f8f9fa;
+}
 
+.review {
+  background-color: white;
+  width: 28%;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid #e9ecef;
+}
+
+.reviewer {
+  font-size: 25px;
+  margin-top: 10px;
+  color: #2c5aa0; /* Dark blue */
+}
+
+.stars {
+  color: #ff7b00; 
+  margin-top: 5px;
+}
 
 /* ===== We Care Section with an iframe map ===== */
 .wecare {
@@ -230,7 +289,6 @@ button:hover {
 .wecare a:hover {
   background: #2962c2;
 }
-
 
 /* ===== Shahd ===== */
 
@@ -380,10 +438,6 @@ button:hover {
 	height: 100%;
 	background-color: #ccc;
 }
-.stars {
-  color: #ff7b00; 
-  margin-top: 5px;
-}
 
 
 /* Button */
@@ -443,7 +497,7 @@ button:hover {
   margin: 1rem auto;
 }
 
-.about-intro p, .vision p{
+.about-intro p, .vision-text p {
   font-size: 1.5rem;     
   line-height: 1.8;      
   text-align: center;    
