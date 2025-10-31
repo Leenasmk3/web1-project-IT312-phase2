@@ -2,42 +2,149 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Sanad - Home</title>
-  <link rel="stylesheet" href="style.css"> 
+  <title>Sanad | Home</title>
+  <link rel="stylesheet" href="sstyle.css">
 </head>
+
 <body>
-
-
-<!-- ===== Navbar (Same as wireframe) ===== -->
-<header class="navbar">
-  <div class="nav-container">
-    <!-- الشعار -->
-    <div class="nav-logo">
+  <!-- شريط التنقل -->
+  <header class="navbar">
+    <div class="nav-container">
+	
+      <div class="nav-logo">
       <a href="index.html">
 		<img src="images/sanad.png" alt="sanad logo">
 	  </a>
     </div>
+	
+      <nav class="nav-links">
+        <a href="index.html" class="current" >Home</a>
+        <a href="services.html" class="border-left">Services</a>
+        <a href="customer-dashboard.html " class="border-left">Customer</a>
+        <a href="provider-dashboard.html" class="border-left">Service Provider</a>
+        <a href="about.html" class="border-left">About Us</a>
+      </nav>
+    </div>
+  </header>
 
-    <!-- الروابط -->
-    <nav class="nav-links">
-      <a href="index.html" class="current">Home</a>
-      <a href="services.html">Services</a>
-      <a href="customer-dashboard.html">Customer</a>
-      <a href="provider-dashboard.html">Service Provider</a>
-      <a href="about.html">About Us</a>
-    </nav>
-  </div>
-</header>
+  <div class="nav-line"></div>
 
-<!-- خط فاصل تحت النافبار -->
-<div class="nav-line"></div>
 
 	<nav class="breadcrumbs dark">
 		<ol class="trail nav-container">
 			<li>Home</li>
 		</ol>
-	</nav>
+    </nav>
+	
 
- 
+<!-- Vision Section -->
+<section class="vision">
+  <div class="vision-text">
+    <h1>Vision</h1>
+    <p>
+      At  <strong>Sanad</strong>, we believe that physical differences are not obstacles but part of human diversity.
+      We aim to build a safe and welcoming space for people with disabilities, offering them the support,
+      services, and joy they need to live fully.
+    </p>
+	<img  class="vision-logo" src ="C:\Users\A\Pictures\Screenshots\logo.png" alt="">
+  </div>
+</section>
+
+
+
+    <hr class="divider">
+
+
+    <div class="content">
+         <!-- Top Services with Reviews -->
+		  <section class="category">
+          <h2 class="cards-title">Top Services</h2>
+          <div class="cards">
+    <!-- Service 1 -->
+    <article class="service-card">
+	<img  src ="C:\Users\A\Pictures\Screenshots\in-person.png" alt="">
+   
+      <h3 class="card-header">Sign Interpreter (In-person)</h3>
+      <p class="row">On-site interpreting for clinics, meetings, and official visits.</p>
+      <div class="hover-info">Helping individuals to communicate confidently during medical, social, and official interactions.</div>
+       <br><hr><br> 
+      <div class="service-review">
+        <p>“The sensory-friendly reading sessions are a joy. The volunteer is so patient and knows how to engage my daughter”</p>
+        <div class="reviewer">👤 Fatimah A.</div>
+        <div class="stars">★★★★★</div>
+      </div>
+   </article>
+
+    <!-- Service 2 -->
+   <article class="service-card service-home">
+     <img src ="C:\Users\A\Pictures\Screenshots\reading.png" alt="">
+     <!-- <div class="service-img"></div>  -->
+      <h3 class="card-header">Reading Assistance</h3>
+      <p class="row">Support to read books and official documents in accessible formats.</p>
+      <div class="hover-info">To assist individuals with visual impairments in accessing and reading books.</div>
+          <br><hr><br> 
+      <div class="service-review">
+        <p>“having someone read the newspaper to me weekly keeps me connected to the world. It's more than a service; it's a friendship.”</p>
+        <div class="reviewer">👤 Yusuf Omar </div>
+        <div class="stars">★★★★☆</div>
+      </div>
+    </article>
+
+    <!-- Service 3 -->
+    <article class="service-card">
+      <img src ="C:\Users\A\Pictures\Screenshots\transport.png" alt="">
+     <!-- <div class="service-img"></div>  -->
+      <h3 class="card-header">Accessible Transportations</h3>
+      <p class="row">Wheelchair-friendly vans for safe and comfortable mobility.</p>
+      <div class="hover-info">Safe and accessible transportation for customers.</div>
+            <br><hr><br> 
+      <div class="service-review">
+        <p>“Sanad's accessible transportation is a lifeline. The drivers are trained to assist with my wheelchair, making every journey safe and stress-free.”</p>
+        <div class="reviewer">👤 Sarah Khalid</div>
+        <div class="stars">★★★★★</div>
+      </div>
+    </article>
+  </div>
+  </section>
+<br><br><br>
+
+<hr>
+
+
+<!-- Extra Section -->
+<section class="wecare">
+  <h2>We Care</h2>
+  <div class="map">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d115990.7619002719!2d46.77323740867622!3d24.702448872118985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sar!2ssa!4v1761921563080!5m2!1sar!2ssa"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+  <a href="https://maps.app.goo.gl/TDZJKn1c9Ep4Ku2D7">Click here for details</a>
+</section>
+
+ </div>
+<!--
+<footer>
+  <div class="footer-container">
+    <div class="footer-left">
+      <p>Find us</p>
+      <div class="social-icons">
+        <a href="#">🐦</a>
+        <a href="#">📘</a>
+        <a href="#">🔗</a>
+      </div>
+    </div>
+
+    <div class="footer-center">
+      <h3>Logo</h3>
+      <p>©2025 Sanad. All rights reserved</p>
+    </div>
+
+    <div class="footer-right">
+      <p>Contact Info</p>
+      <p>+966XXXXXXXX</p>
+      <p>sanadservices@hotmail.com</p>
+    </div>
+  </div>
+</footer>
+ FOOTER -->
 </body>
 </html>
