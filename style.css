@@ -105,6 +105,12 @@ button:hover {
   word-spacing: 4px ;
 }
 
+.border-left{
+	border-left: 1px solid #ccc;
+	padding-left: 10px;
+}
+
+
 .nav-links a.current {
   border-bottom: 2px solid #000;
   font-weight: 600;
@@ -130,9 +136,6 @@ button:hover {
   background-color: #1a4b8f;
 }
 
-.nav-links a + a {
-	border-left: 1px solid #cfcfcf ;
-}
 
 
 
