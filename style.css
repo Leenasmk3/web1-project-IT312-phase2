@@ -12,27 +12,27 @@ body {
 
 /* العناوين */
 h1, h2, h3 {
-  color: #1a4b8f;             /* أزرق غامق */
+  color: #114083;            
 }
 
 /* الروابط */
 a {
-  color: #1a4b8f;
+  color: #215399;
   text-decoration: none;
 }
 
 a:hover {
-  color: #2962c2;             /* أزرق أفتح عند المرور */
+  color: #2962c2;           
 }
 
 /* الإطارات والفواصل */
 hr {
-  border: 1px solid #c8d7eb;  /* رمادي مزرق */
+  border: 1px solid #c8d7eb; 
 }
 
 /* الأزرار */
 button {
-  background-color: #1a4b8f;  /* أزرق غامق */
+  background-color: #1a4b8f; 
   color: white;
   border: none;
   border-radius: 8px;
@@ -41,7 +41,7 @@ button {
 }
 
 button:hover {
-  background-color: #2962c2;  /* أزرق أفتح */
+  background-color: #2962c2;  
 }
 
 
@@ -105,6 +105,12 @@ button:hover {
   word-spacing: 4px ;
 }
 
+.border-left{
+	border-left: 1px solid #ccc;
+	padding-left: 10px;
+}
+
+
 .nav-links a.current {
   border-bottom: 2px solid #000;
   font-weight: 600;
@@ -130,9 +136,6 @@ button:hover {
   background-color: #1a4b8f;
 }
 
-.nav-links a + a {
-	border-left: 1px solid #cfcfcf ;
-}
 
 
 
@@ -337,7 +340,6 @@ button:hover {
   padding: 8px 0;
   font-weight: 600;
   font-size: 14px;
-  transition: background 0.3s;
 }
 
 .btn.btn-dark:hover{
@@ -508,17 +510,17 @@ button:hover {
   max-width: 900px;
   margin: 0 auto;
 
-  display: flex;               /* استخدام Flexbox بدل Grid */
-  flex-wrap: wrap;             /* يخلي العناصر تنتقل لسطر جديد إذا امتلأ السطر */
-  justify-content: space-between; /* توزيع متساوي بين العناصر */
-  gap: 1rem;                   /* مسافة بين الحقول */
+  display: flex;              
+  flex-wrap: wrap;            
+  justify-content: space-between; 
+  gap: 1rem;                
 }
 
 /* كل label (النص + الحقل) */
 .join-form label {
   display: flex;
-  flex-direction: column;      /* يخلي النص فوق الحقل */
-  flex: 0 0 48%;               /* كل عنصر ياخذ تقريباً نصف العرض */
+  flex-direction: column;     
+  flex: 0 0 48%;            
   font-weight: 600;
   color: #094b8f;
 }
