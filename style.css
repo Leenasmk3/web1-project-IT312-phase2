@@ -854,3 +854,102 @@ button:hover {
   display: inline-block;
   margin: 0 0.5rem;
 }
+/* ===== leen ===== */
+/* ===== Manage Staff Page ===== */
+.staff-box {
+  background: #1a4b8f;;
+  border: 1px solid #bad3f2;
+  border-radius: 10px;
+  padding: 16px;
+  margin: 24px auto;
+}
+
+.section-title {
+  font-size: 1.2rem;
+  margin: 0 0 12px;
+  color: white;
+}
+
+.delete-form { margin-top: 6px; }
+
+.staff-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.member-row {
+  display: grid;
+  grid-template-columns: 36px 72px 1fr; /* checkbox - avatar - name */
+  align-items: center;
+  gap: 12px;
+  background: #e9eef9;
+  border: 1px solid #cdddf7;
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+
+.checkbox {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px; height: 24px;
+}
+.checkbox input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+.checkbox .fake {
+  width: 20px; height: 20px;
+  border: 2px solid #1a4b8f;
+  border-radius: 4px;
+  display: inline-block;
+  background: #fff;
+}
+.checkbox input:checked + .fake {
+  background: #1a4b8f;
+  box-shadow: inset 0 0 0 3px #fff;
+}
+
+.avatar {
+  width: 72px; height: 48px;
+  border-radius: 6px; overflow: hidden;
+  background: #dbe7ff;
+  border: 1px solid #cdddf7;
+}
+.avatar img {
+  width: 100%; height: 100%; object-fit: cover;
+}
+
+.member-name {
+  font-weight: 700;
+  color: #222;
+}
+
+/*زر الحذف ر */
+.btn-dark.small {
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 14px;
+}
+.btn-dark.danger {
+  background: #a02727;
+}
+.btn-dark.danger:hover {
+  background: #c43737;
+}
+
+/* تحسين استجابة الجوال */
+@media (max-width: 600px) {
+  .member-row {
+    grid-template-columns: 28px 56px 1fr;
+    gap: 10px;
+  }
+}
+

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Manage Staff Members</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <a href="index.html">
+          <img src="images/sanad.png" alt="sanad logo">
+        </a>
+      </div>
+
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="customer-dashboard.html">Customer</a>
+        <a href="provider-dashboard.html">Service Provider</a>
+        <a href="about.html">About Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="nav-line"></div>
+
+  <!-- Breadcrumbs -->
+  <nav class="breadcrumbs dark" aria-label="Breadcrumb">
+    <ol class="trail nav-container">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="provider-dashboard.html">Service Provider</a></li>
+      <li aria-current="page">Manage Staff Members</li>
+    </ol>
+  </nav>
+
+  <main class="container">
+
+    <!-- ===== delete staff memeber===== -->
+    <section class="staff-box">
+      <h2 class="section-title">Manage Staff Members Profile</h2>
+
+      <form class="delete-form" action="#" method="post">
+        <ul class="staff-list" role="list">
+          <!-- Row 1 -->
+          <li class="member-row">
+            <label class="checkbox">
+              <input type="checkbox" name="delete" value="shahd" />
+              <span class="fake"></span>
+            </label>
+
+            <div class="avatar">
+              <img src="images/shahd.jpg" alt="Shahd photo">
+            </div>
+
+            <div class="member-name">Shahd</div>
+          </li>
+
+          <!-- Row 2 -->
+          <li class="member-row">
+            <label class="checkbox">
+              <input type="checkbox" name="delete[]" value="mohamad" />
+              <span class="fake"></span>
+            </label>
+
+            <div class="avatar">
+              <img src="images/mohamad.jpg" alt="Mohamad photo">
+            </div>
+
+            <div class="member-name">Mohamad</div>
+          </li>
+
+          <!-- Row 3 -->
+          <li class="member-row">
+            <label class="checkbox">
+              <input type="checkbox" name="delete[]" value="sara" />
+              <span class="fake"></span>
+            </label>
+
+            <div class="avatar">
+              <img src="images/sara.webp" alt="Sara photo">
+            </div>
+
+            <div class="member-name">Sara</div>
+          </li>
+        </ul>
+
+        <button type="submit" class="btn-dark small danger">Delete</button>
+      </form>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ===== إضافة عضو جديد ===== -->
+    <section class="join-section">
+      <h2>Add New Staff Member</h2>
+
+      <form class="join-form" action="#" method="post" enctype="multipart/form-data">
+        <label>
+          Name
+          <input type="text" name="name" placeholder="Enter name" required>
+        </label>
+
+        <label class="file-field">
+          Photo
+          <input type="file" name="photo" accept="image/*">
+        </label>
+
+        <label>
+          DoB
+          <input type="date" name="dob" placeholder="dd/mm/yyyy">
+        </label>
+
+        <label>
+          Email
+          <input type="email" name="email" placeholder="example@mail.com" required>
+        </label>
+
+        <label>
+          Area of Expertise
+          <input type="text" name="expertise" placeholder="e.g., Accessibility, Translation">
+        </label>
+
+        <label>
+          Skills
+          <!-- nested list style (user will type bullet-like list) -->
+          <input type="text" name="skills" placeholder="e.g., Sign language, Scheduling">
+        </label>
+
+        <label class="full">
+          Education
+          <input type="text" name="education" placeholder="e.g., B.Sc. in IT">
+        </label>
+
+        <div class="form-actions full">
+          <button type="submit" class="btn btn-dark">Add new member</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer (اختياري) -->
+  <footer class="site-footer">
+    <div class="container footer-box">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Find us</h4>
+          <ul class="social">
+            <li><a href="#" aria-label="X">X</a></li>
+            <li><a href="#" aria-label="Facebook">f</a></li>
+            <li><a href="#" aria-label="LinkedIn">in</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col center">
+          <div class="brand">
+            <img src="images/sanad.png" alt="Sanad logo">
+          </div>
+          <small>©2025 Sanad. All rights reserved</small>
+        </div>
+
+        <div class="footer-col right">
+          <h4>contact Info</h4>
+          <p>+966537282741</p>
+          <p><a href="mailto:sanadservices@gmail.com">sanadservices@gmail.com</a></p>
+        </div>
+      </div>
+
+    
+    </div>
+  </footer>
+
+</body>
+</html>
