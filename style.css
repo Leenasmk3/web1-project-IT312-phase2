@@ -496,7 +496,7 @@ button:hover {
 /* ===== Join Our Team Section ===== */
 
 
-.join-section h2 {
+.join-section h2 ,  h2 {
   text-align: center;
   margin: 1.5rem 0 1rem;
 }
@@ -516,8 +516,26 @@ button:hover {
   gap: 1rem;                
 }
 
+/*  الهيكل العام للنوذج اضافه خدمه  */
+.addService-form {
+  background-color: #f7f7f7;
+  padding: 30px;
+  border-radius: 8px;
+  border: 1px solid #d4d4d4;
+  max-width: 700px;
+  margin: auto;
+  position: relative;
+}
+
+.form-header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
 /* كل label (النص + الحقل) */
-.join-form label {
+.join-form label , .addService-form label {
   display: flex;
   flex-direction: column;     
   flex: 0 0 48%;            
@@ -527,7 +545,9 @@ button:hover {
 
 /* تنسيق الحقول */
 .join-form input,
-.join-form textarea {
+.join-form textarea,
+.addService-form input,
+.addService-form textarea  {
   padding: 0.6rem;
   border: 1px solid #cfcfcf;
   border-radius: 6px;
@@ -535,12 +555,12 @@ button:hover {
 }
 
 /* حقل الرسالة يأخذ عرض كامل */
-.join-form .full {
+.join-form .full, .addService-form .full {
   flex: 0 0 100%;
 }
 
 /* الزر في المنتصف */
-.join-form button {
+ .addService-form Button, .join-form Button {
   background-color: #0b3b8a;
   color: white;
   border: none;
@@ -560,7 +580,6 @@ button:hover {
 
 
 
-
 @media screen and (max-width: 768px) {
   .services-layout { flex-direction: column; }
   .sort-box { width: 100%; }
@@ -572,4 +591,3 @@ button:hover {
   .join-form button {width: 60%;}
 }
 /* ===== Shahd ===== */
-
