@@ -155,10 +155,28 @@ button:hover {
   font-size: 15px;
 }
 
-.breadcrumbs.dark .trail li+li::before {
-  content: ">";
+.breadcrumbs{
+  background-color: #1a4b8f;
+  padding: 8px 16px;
   color: #fff;
-  margin: 0 .4rem;
+  font-weight: 600;
+}
+
+.trail{
+	list-style: none;
+	display: flex;
+	gap: 8 px;
+	margin: 0;
+	padding: 0;
+}
+
+.trail a{
+	color: #fff;
+	text-decoration: none;
+}
+
+.trail li{
+	font-size: 15px;
 }
 
 .breadcrumbs.dark a {
