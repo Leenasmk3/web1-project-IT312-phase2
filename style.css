@@ -802,7 +802,6 @@ button:hover {
 /* ----------------------------------*/
 /* ===== leen ===== */
 /* ===== Provider Dashboard Page ===== */
-/* ===== Provider (scoped) – لن تؤثر إلا على الصفحة اللي فيها body.sp-page ===== */
 .sp-page .page-title-container {
   text-align: left;
   max-width: 1200px;
@@ -820,7 +819,7 @@ button:hover {
   text-align: left;
 }
 
-/* ترتيب الكروت عمودياً بحيث الزر يثبت تحت */
+
 .sp-page .service-card {
   box-shadow: 0 0 0 1px #d0d0d0 inset;
   display: flex;
@@ -828,7 +827,7 @@ button:hover {
   justify-content: space-between;
 }
 
-/* الزر Edit: صغير، يمين تحت */
+
 .sp-page .service-card .btn.btn-dark {
   width: auto;
   padding: 6px 16px;
@@ -839,6 +838,20 @@ button:hover {
 
 .sp-page .cards {
   justify-content: flex-start; 
+}
+
+.sp-page .quantity-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sp-page .quantity-row .label {
+  margin-right: 8px;
+}
+
+.sp-page .quantity-row .btn.btn-dark {
+  margin-left: 12px; 
 }
 
 
