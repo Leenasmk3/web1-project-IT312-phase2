@@ -2,12 +2,12 @@
 
 /* ألوان وتنسيق عام */
 body {
-    background-color: #fff;
-    color: #0d1b2a;
-    font-family: serif, Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
+  background-color: #fff;   
+  color: #0d1b2a;             /* لون النص */
+  font-family: serif, Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
 }
 
 /* العناوين */
@@ -44,6 +44,8 @@ button:hover {
   background-color: #2962c2;  
 }
 
+
+
 /* الصور */
 .nav-logo img {
   height: 55px;
@@ -54,6 +56,11 @@ button:hover {
 	display: inline-block;
 	text-decoration: none;
 }
+
+
+
+
+
 
 
 /* ===== Navbar based on wireframe ===== */
@@ -130,6 +137,8 @@ button:hover {
 }
 
 
+
+
 /* ===== Breadcrumb Dark Style ===== */
 .breadcrumbs.dark {
   background-color: #062c6d; 
@@ -201,6 +210,8 @@ button:hover {
 .service-home:hover .hover-info {
   opacity: 1;
 }
+
+
 
 /* REVIEWS SECTION */
 .reviews {
@@ -351,7 +362,6 @@ button:hover {
 	margin: 10px 0;		
 }
 
-
 .label{
 	font-weight: bold;
 	display: inline-block;
@@ -464,6 +474,7 @@ button:hover {
   font-weight: bold;
   color: #222;
 }
+
 
 
 /* ===== About Page ===== */
@@ -681,6 +692,8 @@ button:hover {
   background-color: #062c6d;
 }
 
+
+
 @media screen and (max-width: 768px) {
   .services-layout { flex-direction: column; }
   .sort-box { width: 100%; }
@@ -788,6 +801,7 @@ button:hover {
 
 /* ----------------------------------*/
 /* ===== Provider Dashboard ===== */
+
 
 .provider h2 { 
   text-align: left;
@@ -938,6 +952,72 @@ button:hover {
     gap: 10px;
   }
 }
+/* ====== Team Table with Nested Lists ====== */
+.team-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border: 1px solid #c8d7eb;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  margin: 24px auto;
+}
+
+.team-table th {
+  background-color: #eaf1fb;
+  color: #0c468b;
+  padding: 10px;
+  border: 1px solid #c8d7eb;
+  text-align: left;
+}
+
+.team-table td {
+  border: 1px solid #c8d7eb;
+  padding: 10px 14px;
+  vertical-align: top;
+  background-color: #fff;
+}
+
+.team-table img {
+  width: 110px;
+  height: 85px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #c8d7eb;
+}
+
+/* القوائم */
+.team-table ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.team-table li {
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+
+/* قوائم فرعية داخل Skills & Education */
+.team-table .nested > li {
+  font-weight: 600;
+  color: #0c468b;
+}
+.team-table .nested > li > ul {
+  list-style: circle;
+  padding-left: 18px;
+  margin-top: 4px;
+  color: #333;
+  font-weight: 400;
+}
+
+/* قوائم الخبرات البسيطة */
+.team-table .flat {
+  list-style: disc;
+  padding-left: 18px;
+}
+
+.team-table tr:nth-child(even) td {
+  background-color: #f8fbff;
+}
 /* ===== Jood ======= */
 .breadcrumb p {
     max-width: 1200px;
@@ -962,23 +1042,22 @@ main {
 .page-title-container {
     width: 100%;
     max-width: 700px;
-    margin: 0 auto 1rem auto; /* توسيط الحاوية */
+    margin: 0 auto 1rem auto;
     padding-bottom: 0.5rem;
-    border-bottom: none; /* إلغاء الخط السفلي القديم من الحاوية */
+    border-bottom: none;
     text-align: center;
 }
 
-/* ⭐ تنسيق العنوان الموحد (أزرق + خط نحيف) ⭐ */
 .page-title {
     font-size: 2.25rem;
     font-weight: 700;
     margin: 0 0 0.5rem 0;
     text-align: center;
     
-    color: #1a4b8f; /* اللون الأزرق الموحد */
-    border-bottom: 1px solid #ccc; /* الخط السفلي النحيف (1px) والأزرق الموحد */
-    padding-bottom: 25px; /* المسافة تحت النص وقبل الخط */
-    margin-bottom: 30px; /* المسافة تحت الخط */
+    color: #1a4b8f; 
+    border-bottom: 1px solid #ccc; 
+    padding-bottom: 25px;
+    margin-bottom: 30px; 
 }
 
 /* ---------------------------------------------------- */
@@ -1082,7 +1161,7 @@ main {
 
 .action-button {
     padding: 18px 50px;
-    background-color: #1a4b8f; /* ⭐ توحيد اللون للأزرق الموحد ⭐ */
+    background-color: #1a4b8f; 
     color: white;
     text-decoration: none;
     border-radius: 6px;
@@ -1093,7 +1172,7 @@ main {
     transition: background-color 0.2s;
 }
 .action-button:hover {
-    background-color: #222; /* ⭐ توحيد تأثير التحويم للون الداكن (#222) ⭐ */
+	    background-color: #222; 
 }
 
 /* ---------------------------------------------------- */
@@ -1168,15 +1247,15 @@ main {
     font-size: 1rem;
     font-family: 'Times New Roman', Times, serif;
 }
-/* ⭐ توحيد تنسيق زر الإرسال (Submit) داخل Modal ⭐ */
+
 .reschedule-form button[type="submit"] {
     display: block;
     width: 100%;
     padding: 1rem;
-    background-color: #1a4b8f; /* توحيد اللون للأزرق #1a4b8f */
+    background-color: #1a4b8f; 
     color: white;
-    border: 1px solid black; /* توحيد الإطار للأسود 1px */
-    border-radius: 6px; /* توحيد الزوايا لـ 6px */
+    border: 1px solid black; 
+    border-radius: 6px; 
     cursor: pointer;
     font-size: 1.1rem;
     font-weight: bold;
@@ -1189,7 +1268,7 @@ main {
 }
 
 /* ---------------------------------------------------- */
-/* تنسيقات خاصة بـ تقييم الخدمة (ServiceEvaultion)       */
+/*         تنسيقات خاصة بـ تقييم الخدمة (ServiceEvaultion)       */
 /* ---------------------------------------------------- */
 
 .evaluation-container {
@@ -1298,12 +1377,12 @@ main {
     margin-top: 30px;
     text-align: center;
 }
-/* ⭐ التعديل هنا لزر الإرسال (.submit-btn) في التقييم ⭐ */
+
 .submit-btn {
     color: white;
     padding: 0.8rem 2.5rem;
     font-size: 1.0rem;
-    font-weight: 600; /* توحيد وزن الخط لـ 600 */
+    font-weight: 600; 
     cursor: pointer;
     width: 200px;
     background-color: #1a4b8f;
@@ -1312,7 +1391,7 @@ main {
     font-family: serif, Arial, sans-serif; /* إضافة الخط العام لضمان التوحيد */
 }
 .submit-btn:hover {
-    background-color: #222; /* توحيد تأثير التحويم لـ #222 */
+    background-color: #222; 
 }
 
 /* ---------------------------------------------------- */
@@ -1329,7 +1408,7 @@ main {
     max-width: 700px;
     position: relative;
     margin-top: 1rem;
-    margin: 0 auto; /* توسيط الحاوية أفقيًا */
+    margin: 0 auto;
 }
 
 .request-form {
@@ -1342,7 +1421,6 @@ main {
     align-items: center;
 }
 
-/* override للـ form-group داخل بطاقة طلبات العميل */
 .service-requests .request-card .form-group {
     display: block !important;
     margin-bottom: 5px;
@@ -1389,7 +1467,6 @@ main {
     margin-top: 3rem;
 }
 
-/* ⭐ التعديل هنا لـ .form-btn (الزر الأساسي) ⭐ */
 .form-btn {
     width: 120px;
     padding: 0.8rem 0;
