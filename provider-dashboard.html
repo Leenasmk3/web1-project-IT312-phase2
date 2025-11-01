@@ -1,49 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sanad | Service Provider</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Provider Dashboard</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- ===== Navbar مطابق لصفحة index ===== -->
-  <header class="navbar">
+
+    <header class="navbar">
     <div class="nav-container">
       <div class="nav-logo">
         <a href="index.html">
-          <img src="images/sanad.png" alt="sanad logo">
+          <img src="images/sanad.png" alt="Sanad Logo">
         </a>
       </div>
+
       <nav class="nav-links">
         <a href="index.html">Home</a>
-        <a href="services.html" class="border-left">Services</a>
-        <a href="customer-dashboard.html" class="border-left">Customer</a>
-        <a href="provider-dashboard.html" class="current ">Service Provider</a>
-        <a href="about.html" class="border-left">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="customer-dashboard.html">Customer</a>
+        <a href="provider-dashboard.html" class="current">Service Provider</a>
+        <a href="about.html">About Us</a>
       </nav>
     </div>
   </header>
 
-  <!-- الخط الأزرق اللي تحت الهيدر -->
   <div class="nav-line"></div>
 
-  <!-- ===== Breadcrumb مطابق لتصميم index ===== -->
-  <nav class="breadcrumbs dark">
+  <!-- Breadcrumbs -->
+  <nav class="breadcrumbs dark" aria-label="Breadcrumb">
     <ol class="trail nav-container">
       <li><a href="index.html">Home</a></li>
-      <li>Service Provider</li>
+      <li aria-current="page">Service Provider</li>
     </ol>
   </nav>
 
-  <!-- ===== Main محتوى الصفحة بدون تغيير ===== -->
-  
   <!-- Main -->
-  <main class="container section provider">
- <hr class="divider long">
-    <h1>Seller</h1>
-    
+  <main class="container section">
+
+   
+<h1>Seller</h1>
+    <hr class="divider long">
     <h2>List of services:</h2>
 
     <section class="cards cols-3">
@@ -164,7 +163,7 @@
 
     <div class="actions">
       <a class="btn-dark" href="manage-staff.html">Manage Staff Member</a>
-      <a class="btn-dark" href="addService.html">Add a New Service</a>
+      <a class="btn-dark" href="Add-New-Service.html">Add a New Service</a>
     </div>
   </main>
 
