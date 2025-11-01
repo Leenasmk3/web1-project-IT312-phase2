@@ -398,6 +398,10 @@ button:hover {
   border-radius: 10px;
 }
 
+.service-card h3.name-row{
+	font-size: 1rem;
+}
+
 /* السعر */
 .price-badge {
   background: #f1f1f1;
@@ -520,6 +524,48 @@ button:hover {
 }
 
 
+.section-title { 
+  text-align: center; 
+  font-size: 1.6rem; 
+  margin: 0 0 20px; 
+  font-weight: 700; 
+}
+
+.member-name {
+  margin: 10px 0 6px;
+  font-size: 1.05rem;  
+  font-weight: 700;
+}
+.member-name a { text-decoration: none; color: #fff; }
+
+
+.member-card {
+  background: #fff;
+  border-radius: 8px;
+  text-align: center;
+  padding: 0 0 20px;
+  width: 280px;
+}
+
+/* الشريط الأزرق */
+.member-name-box {
+  background-color: #0a4b9c;   
+  color: white;
+  padding: 8px 0;
+  margin-top: 5px;    
+  border-radius: 5px;  
+}
+
+.member-name-box:hover {
+  background-color: #062c6d;
+}
+
+/* الاسم داخل الشريط */
+.member-name {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
 
 /* ----- Team Section ----- */
 
