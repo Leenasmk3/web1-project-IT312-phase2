@@ -165,7 +165,7 @@ button:hover {
 .trail{
 	list-style: none;
 	display: flex;
-	gap: 8 px;
+	gap: 8px;
 	margin: 0;
 	padding: 0;
 }
