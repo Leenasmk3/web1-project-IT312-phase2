@@ -180,7 +180,6 @@ button:hover {
 /* ===== Home Page Services Hover Effect ===== */
 .service-home {
   position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-home:hover {
@@ -194,13 +193,12 @@ button:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(26, 75, 143, 0.9); /* Dark blue */
+  background-color: rgba(26, 75, 143, 0.9); 
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   opacity: 0;
-  transition: opacity 0.3s;
   padding: 15px;
   text-align: center;
   font-weight: bold;
