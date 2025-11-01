@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a new Request Service</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+    <header class="navbar">
+    <div class="nav-container">
+	
+      <div class="nav-logo">
+      <a href="index.html">
+		<img src="images/sanad.png" alt="sanad logo">
+	  </a>
+    </div>
+	
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="services.html" class="current border-left">Services</a>
+        <a href="customer-dashboard.html " class="border-left">Customer</a>
+        <a href="provider-dashboard.html" class="border-left">Service Provider</a>
+        <a href="about.html" class="border-left">About Us</a>
+      </nav>
+    </div>
+  </header>
+	<div class="nav-line"></div>
+	<nav class="breadcrumbs dark">
+		<ol class="trail nav-container">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="Customer.html">Customer</a></li>
+			<li>Service Request</li>
+		</ol>
+    </nav>
+    <main>
+        
+        <h1 class="page-title">Add a new Request service:</h1>
+
+        <section class="request-container">
+            
+            <form action="#" method="POST" class="request-form">
+                
+                <div class="form-group">
+                    <label for="customer-name">Customer Name:</label>
+                    <input type="text" id="customer-name" name="customerName" placeholder="Enter your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="service-select">Choose a Service:</label>
+                    <select id="service-select" name="serviceId" required>
+                        <option value="" disabled selected>Choose from the list</option>
+                        <option value="svc1">Delivery Services</option>
+                        <option value="svc2">Facilites (online)</option>
+                        <option value="svc3">Facilites (In-Person)</option>
+                        <option value="svc4">Reading Assistance</option>
+						<option value="svc5">Asssistive Tools</option>
+						<option value="svc6">Consultations</option>
+						<option value="svc7">Learning Courses</option>
+						<option value="svc8">Sign Interpreter (Online)</option>
+						<option value="svc9">Sign Interpreter (In-Person)</option>
+						<option value="svc10">Accessible Transportation</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="due-date">Due Date:</label>
+                    <input type="date" id="due-date" name="dueDate" required>
+                </div>
+
+                <div class="form-group description-group">
+                    <label for="request-description">Request Description:</label>
+                    <textarea id="request-description" name="requestDescription" rows="6" placeholder="Describe your request in detail..."></textarea>
+                </div>
+                
+                <div class="submit-area">
+                    <button type="button" class="form-btn btn-cancel">Cancel</button>
+                    <button type="submit" class="form-btn btn-submit">Submit</button>
+                </div>
+                
+            </form>
+            
+        </section>
+        
+    </main>
+
+   <!-- Footer -->
+<footer class="site-footer">
+    <div class="container footer-box">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Find us</h4>
+          <ul class="social">
+            <li><a href="#" aria-label="X">X</a></li>
+            <li><a href="#" aria-label="Facebook">f</a></li>
+            <li><a href="#" aria-label="LinkedIn">in</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col center">
+          <div class="brand">
+            <img src="images/sanad.png" alt="Sanad logo">
+          </div>
+          <small>©2025 Sanad. All rights reserved</small>
+        </div>
+
+        <div class="footer-col right">
+          <h4>contact Info</h4>
+          <p>+966537282741</p>
+          <p><a href="mailto:sanadservices@gmail.com">sanadservices@gmail.com</a></p>
+        </div>
+      </div>
+
+    
+    </div>
+  </footer>
+
+</body>
+</html>
