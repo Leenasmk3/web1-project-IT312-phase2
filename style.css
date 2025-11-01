@@ -2,12 +2,12 @@
 
 /* ألوان وتنسيق عام */
 body {
-  background-color: #fff;   
-  color: #0d1b2a;             /* لون النص */
-  font-family: serif, Arial, sans-serif;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
+    background-color: #fff;
+    color: #0d1b2a;
+    font-family: serif, Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
 
 /* العناوين */
@@ -44,8 +44,6 @@ button:hover {
   background-color: #2962c2;  
 }
 
-
-
 /* الصور */
 .nav-logo img {
   height: 55px;
@@ -56,11 +54,6 @@ button:hover {
 	display: inline-block;
 	text-decoration: none;
 }
-
-
-
-
-
 
 
 /* ===== Navbar based on wireframe ===== */
@@ -137,8 +130,6 @@ button:hover {
 }
 
 
-
-
 /* ===== Breadcrumb Dark Style ===== */
 .breadcrumbs.dark {
   background-color: #062c6d; 
@@ -210,8 +201,6 @@ button:hover {
 .service-home:hover .hover-info {
   opacity: 1;
 }
-
-
 
 /* REVIEWS SECTION */
 .reviews {
@@ -362,6 +351,7 @@ button:hover {
 	margin: 10px 0;		
 }
 
+
 .label{
 	font-weight: bold;
 	display: inline-block;
@@ -474,7 +464,6 @@ button:hover {
   font-weight: bold;
   color: #222;
 }
-
 
 
 /* ===== About Page ===== */
@@ -692,8 +681,6 @@ button:hover {
   background-color: #062c6d;
 }
 
-
-
 @media screen and (max-width: 768px) {
   .services-layout { flex-direction: column; }
   .sort-box { width: 100%; }
@@ -801,7 +788,6 @@ button:hover {
 
 /* ----------------------------------*/
 /* ===== Provider Dashboard ===== */
-
 
 .provider h2 { 
   text-align: left;
@@ -952,74 +938,489 @@ button:hover {
     gap: 10px;
   }
 }
-/* ====== Team Table with Nested Lists ====== */
-.team-table {
-  width: 100%;
-  border-collapse: collapse;
-  background: #fff;
-  border: 1px solid #c8d7eb;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-  margin: 24px auto;
+/* ===== Jood ======= */
+.breadcrumb p {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 4rem;
 }
 
-.team-table th {
-  background-color: #eaf1fb;
-  color: #0c468b;
-  padding: 10px;
-  border: 1px solid #c8d7eb;
-  text-align: left;
+.header-separator {
+    height: 10px;
+    background-color: #f0f0f0;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
 }
 
-.team-table td {
-  border: 1px solid #c8d7eb;
-  padding: 10px 14px;
-  vertical-align: top;
-  background-color: #fff;
+/* 4. المحتوى الرئيسي والعنوان (Main Content & Title) */
+main {
+    flex-grow: 1;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
 }
 
-.team-table img {
-  width: 110px;
-  height: 85px;
-  object-fit: cover;
-  border-radius: 6px;
-  border: 1px solid #c8d7eb;
+.page-title-container {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto 1rem auto; /* توسيط الحاوية */
+    padding-bottom: 0.5rem;
+    border-bottom: none; /* إلغاء الخط السفلي القديم من الحاوية */
+    text-align: center;
 }
 
-/* القوائم */
-.team-table ul {
-  margin: 0;
-  padding-left: 18px;
+/* ⭐ تنسيق العنوان الموحد (أزرق + خط نحيف) ⭐ */
+.page-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    text-align: center;
+    
+    color: #1a4b8f; /* اللون الأزرق الموحد */
+    border-bottom: 1px solid #ccc; /* الخط السفلي النحيف (1px) والأزرق الموحد */
+    padding-bottom: 25px; /* المسافة تحت النص وقبل الخط */
+    margin-bottom: 30px; /* المسافة تحت الخط */
 }
 
-.team-table li {
-  margin-bottom: 4px;
-  line-height: 1.4;
+/* ---------------------------------------------------- */
+/* ⭐ تنسيقات خاصة بـ صفحة العميل (Customer) ⭐            */
+/* ---------------------------------------------------- */
+
+/* تنسيقات قسم طلبات العميل (Service Requests) */
+.service-requests {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 50px;
 }
 
-/* قوائم فرعية داخل Skills & Education */
-.team-table .nested > li {
-  font-weight: 600;
-  color: #0c468b;
-}
-.team-table .nested > li > ul {
-  list-style: circle;
-  padding-left: 18px;
-  margin-top: 4px;
-  color: #333;
-  font-weight: 400;
+/* تنسيقات بطاقة الطلب (Request Card) */
+.request-card {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
-/* قوائم الخبرات البسيطة */
-.team-table .flat {
-  list-style: disc;
-  padding-left: 18px;
+.service-image {
+    height: 160px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 10px;
 }
 
-.team-table tr:nth-child(even) td {
-  background-color: #f8fbff;
+.request-card p {
+    margin: 5px 0;
+    line-height: 1.3;
+    font-size: 0.95rem;
+}
+.request-card span {
+    font-weight: 600;
+}
+
+/* تنسيقات قسم الإجراءات (Actions) */
+.card-actions {
+    margin-top: 10px;
+    display: flex;
+}
+
+/* تنسيق الروابط (Reschedule) لتبدو كأزرار */
+.card-actions a {
+    padding: 5px 15px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: opacity 0.2s, background-color 0.2s;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+/* تنسيق الأزرار (Statue) */
+.card-actions button {
+    padding: 5px 15px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: opacity 0.2s, background-color 0.2s;
+}
+
+/* تنسيقات زر Reschedule */
+.btn-reschedule.active-reschedule {
+    background-color: #d1fae5;
+    color: #065f46;
+    cursor: pointer;
+}
+
+.btn-reschedule:not(.active-reschedule) {
+    background-color: #e5e7eb;
+    color: #6b7280;
+    cursor: default;
+    pointer-events: none;
+}
+
+/* تنسيقات أزرار الحالات (Provided, Pending, Unload) */
+.card-actions button:not(.btn-reschedule) {
+    cursor: default !important;
+    pointer-events: none;
+    background-color: #374151;
+    color: white;
+}
+
+/* تنسيقات لوحة التحكم (Dashboard Actions) */
+.dashboard-actions {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding-bottom: 40px;
+}
+
+.action-button {
+    padding: 18px 50px;
+    background-color: #1a4b8f; /* ⭐ توحيد اللون للأزرق الموحد ⭐ */
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s;
+}
+.action-button:hover {
+    background-color: #222; /* ⭐ توحيد تأثير التحويم للون الداكن (#222) ⭐ */
+}
+
+/* ---------------------------------------------------- */
+/* ⭐ تنسيقات خاصة بنافذة تغيير الموعد (Reschedule Modal) ⭐     */
+/* ---------------------------------------------------- */
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+/* التعديل: إظهار النافذة عند النقر على الرابط الذي يشير إلى ID النافذة */
+.modal-overlay:target {
+    display: flex;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    font-family: serif, Arial, sans-serif;
+}
+
+.modal-content h3 {
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    background: none;
+    text-decoration: none;
+}
+
+.reschedule-form .form-group {
+    margin-bottom: 1.5rem;
+}
+.reschedule-form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+.reschedule-form input[type="date"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #aaa;
+    border-radius: 0;
+    box-sizing: border-box;
+    font-size: 1rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+/* ⭐ توحيد تنسيق زر الإرسال (Submit) داخل Modal ⭐ */
+.reschedule-form button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background-color: #1a4b8f; /* توحيد اللون للأزرق #1a4b8f */
+    color: white;
+    border: 1px solid black; /* توحيد الإطار للأسود 1px */
+    border-radius: 6px; /* توحيد الزوايا لـ 6px */
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    transition: background-color 0.2s;
+    font-family: serif, Arial, sans-serif; /* توحيد الخط للعام */
+}
+.reschedule-form button[type="submit"]:hover {
+    background-color: #222; /* توحيد تأثير التحويم لـ #222 */
+}
+
+/* ---------------------------------------------------- */
+/* تنسيقات خاصة بـ تقييم الخدمة (ServiceEvaultion)       */
+/* ---------------------------------------------------- */
+
+.evaluation-container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    position: relative;
+    margin-top: 1rem;
+    text-align: left;
+    margin: 0 auto; /* توسيط الحاوية أفقيًا */
+}
+
+/* تنسيق زر الإغلاق (X) في صفحة التقييم كـ a */
+.evaluation-container .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: 1px solid #333;
+    padding: 0 8px;
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    color: #333;
+    border-radius: 0;
+    text-decoration: none;
+}
+
+/* تغميق العناوين (Labels) */
+.evaluation-form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* تنسيق حقل الاختيار (Select) و (Textarea) */
+.evaluation-form select,
+.evaluation-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    box-sizing: border-box;
+    font-size: 1rem;
+    font-family: 'Times New Roman', Times, serif;
+    resize: vertical;
+}
+
+/* تنسيق النجوم: أفقي من اليسار، التحديد أصفر */
+.rating-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.stars {
+    direction: ltr;
+    display: inline-block;
+    unicode-bidi: bidi-override;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 3rem;
+    order: 2;
+    margin-top: 5px;
+}
+
+/* إخفاء أزرار الراديو (الدوائر الصغيرة) */
+.stars input {
+    display: none;
+}
+
+/* نجوم (الـ Label) */
+.stars label {
+    font-size: 2.5rem;
+    color: transparent;
+    float: none;
+    display: inline-block; /* لضمان ظهورها بشكل أفقي */
+    cursor: pointer;
+    padding: 0 0.2rem;
+    transition: color 0.3s;
+}
+
+.stars label::before {
+    content: "\2605";
+    color: #333;
+    text-shadow: 1px 1px 0 #333, -1px -1px 0 #333, 1px -1px 0 #333, -1px 1px 0 #333, 0 0 1px #fff;
+}
+
+.stars input:not(:checked) + label::before {
+    color: transparent; /* إخفاء تعبئة النجمة غير المحددة */
+    text-shadow: 1px 1px 0 #333, -1px -1px 0 #333, 1px -1px 0 #333, -1px 1px 0 #333; /* إطار رمادي واضح */
 }
 
 
+/* تأثير التحديد (Selected effect) - التعبئة باللون الأصفر */
+.stars input:checked ~ label::before {
+    color: #ffc107;
+    text-shadow: 0 0 2px #ffc107;
+}
 
+.submit-area {
+    margin-top: 30px;
+    text-align: center;
+}
+/* ⭐ التعديل هنا لزر الإرسال (.submit-btn) في التقييم ⭐ */
+.submit-btn {
+    color: white;
+    padding: 0.8rem 2.5rem;
+    font-size: 1.0rem;
+    font-weight: 600; /* توحيد وزن الخط لـ 600 */
+    cursor: pointer;
+    width: 200px;
+    background-color: #1a4b8f;
+    border-radius: 6px;
+    border: 1px solid black;
+    font-family: serif, Arial, sans-serif; /* إضافة الخط العام لضمان التوحيد */
+}
+.submit-btn:hover {
+    background-color: #222; /* توحيد تأثير التحويم لـ #222 */
+}
 
+/* ---------------------------------------------------- */
+/* ⭐ تنسيقات خاصة بـ نموذج طلب الخدمة (ServiceRequest) ⭐     */
+/* ---------------------------------------------------- */
 
+.request-container {
+    background-color: white;
+    padding: 3rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 700px;
+    position: relative;
+    margin-top: 1rem;
+    margin: 0 auto; /* توسيط الحاوية أفقيًا */
+}
+
+.request-form {
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    display: block;
+    align-items: center;
+}
+
+/* override للـ form-group داخل بطاقة طلبات العميل */
+.service-requests .request-card .form-group {
+    display: block !important;
+    margin-bottom: 5px;
+}
+
+.request-form label {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    width: auto;
+}
+
+.request-form input[type="text"],
+.request-form input[type="date"],
+.request-form select,
+.request-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #aaa;
+    border-radius: 0;
+    box-sizing: border-box;
+    font-size: 1rem;
+    appearance: none;
+    -webkit-appearance: none;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.request-form select {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="%23333" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    padding-right: 2.5rem;
+}
+
+.request-form textarea {
+    min-height: 120px;
+}
+
+.submit-area {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 3rem;
+}
+
+/* ⭐ التعديل هنا لـ .form-btn (الزر الأساسي) ⭐ */
+.form-btn {
+    width: 120px;
+    padding: 0.8rem 0;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+    border-radius: 0;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    font-family: serif, Arial, sans-serif; /* توحيد الخط للعام */
+}
+
+.btn-cancel {
+    background-color: white;
+    color: black;
+    border-radius: 6px;
+    border: 1px solid black;
+    box-shadow: none;
+}
+
+.btn-submit {
+    background-color: #1a4b8f;
+    color: white;
+    border-radius: 6px;
+    border: 1px solid black;
+}
+
+.btn-cancel:hover {
+    background-color: #f0f0f0;
+}
+.btn-submit:hover {
+    background-color: #222;
+}
