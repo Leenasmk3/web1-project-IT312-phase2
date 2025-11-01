@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sanad - Provider Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="sp-page">
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <a href="index.html">
+          <img src="images/sanad.png" alt="sanad logo" />
+        </a>
+      </div>
+
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="services.html" class="border-left">Services</a>
+        <a href="customer-dashboard.html" class="border-left">Customer</a>
+        <a href="ServiceProvider.html" class="current border-left">Service Provider</a>
+        <a href="about.html" class="border-left">About Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="nav-line"></div>
+
+  <!-- Breadcrumbs -->
+  <nav class="breadcrumbs dark">
+    <ol class="trail nav-container">
+      <li><a href="index.html">Home</a></li>
+      <li>Service Provider</li>
+    </ol>
+  </nav>
+
+  <!-- Main content -->
+  <main class="container">
+    <section class="page-title-container">
+      <h1 class="page-title">Seller</h1>
+    </section>
+
+    <section>
+      <h2 class="cards-title">List of services:</h2>
+
+      <div class="cards">
+        <!-- 1 -->
+        <article class="service-card">
+          <img src="images/ReadingAssistance.jfif" alt="Reading Assistance" />
+          <div class="card-header">
+            <p class="row name-row"><span class="label">Name:</span> Reading Assistance</p>
+            <span class="price-badge">45SR</span>
+          </div>
+          <p class="row"><span class="label">Description:</span> Support to read books and official documents in accessible formats.</p>
+          <p class="row"><span class="label">Quantity:</span> #13</p>
+          <a href="#" class="btn btn-dark">Edit</a>
+        </article>
+
+        <!-- 2 -->
+        <article class="service-card">
+          <img src="images/AccessibleTransportation.jfif" alt="Accessible Transportation" />
+          <div class="card-header">
+            <p class="row name-row"><span class="label">Name:</span> Accessible Transportation</p>
+            <span class="price-badge">67SR</span>
+          </div>
+          <p class="row"><span class="label">Description:</span> Wheelchair-friendly vans for safe and comfortable mobility.</p>
+          <p class="row"><span class="label">Quantity:</span> #15</p>
+          <a href="#" class="btn btn-dark">Edit</a>
+        </article>
+
+        <!-- 3 -->
+        <article class="service-card">
+          <img src="images/LearningCourses.jfif" alt="Learning Courses" />
+          <div class="card-header">
+            <p class="row name-row"><span class="label">Name:</span> Learning Courses</p>
+            <span class="price-badge">100SR</span>
+          </div>
+          <p class="row"><span class="label">Description:</span> Inclusive training and awareness sessions for skills development.</p>
+          <p class="row"><span class="label">Quantity:</span> #80</p>
+          <a href="#" class="btn btn-dark">Edit</a>
+        </article>
+
+        <!-- 4 -->
+        <article class="service-card">
+          <img src="images/Consultations.jfif" alt="Consultations" />
+          <div class="card-header">
+            <p class="row name-row"><span class="label">Name:</span> Consultations</p>
+            <span class="price-badge">95SR</span>
+          </div>
+          <p class="row"><span class="label">Description:</span> Expert advice to choose the right services and accessibility plans.</p>
+          <p class="row"><span class="label">Quantity:</span> #20</p>
+          <a href="#" class="btn btn-dark">Edit</a>
+        </article>
+
+        <!-- 5 -->
+        <article class="service-card">
+          <img src="images/AssistiveTools.jfif" alt="Assistive Tools" />
+          <div class="card-header">
+            <p class="row name-row"><span class="label">Name:</span> Assistive Tools</p>
+            <span class="price-badge">80SR</span>
+          </div>
+          <p class="row"><span class="label">Description:</span> Devices and equipment that support independence and daily tasks.</p>
+          <p class="row"><span class="label">Quantity:</span> #50</p>
+          <a href="#" class="btn btn-dark">Edit</a>
+        </article>
+
+        <!-- 6 -->
+        <article class="service-card">
+          <img src="images/SignInterpreter(In-person).jfif" alt="Sign Interpreter (In-person)" />
+          <div class="card-header">
+            <p class="row name-row"><span class="label">Name:</span> Sign Interpreter (In-person)</p>
+            <span class="price-badge">120SR</span>
+          </div>
+          <p class="row"><span class="label">Description:</span> On-site interpreting for clinics, meetings, and official visits.</p>
+          <p class="row"><span class="label">Quantity:</span> #4</p>
+          <a href="#" class="btn btn-dark">Edit</a>
+        </article>
+
+        <!-- 7 -->
+        <article class="service-card">
+          <img src="images/SignInterpreter(Online).jfif" alt="Sign Interpreter (Online)" />
+          <div class="card-header">
+            <p class="row name-row"><span class="label">Name:</span> Sign Interpreter (Online)</p>
+            <span class="price-badge">65SR</span>
+          </div>
+          <p class="row"><span class="label">Description:</span> Instant remote interpretation via certified sign language experts.</p>
+          <p class="row"><span class="label">Quantity:</span> #11</p>
+          <a href="#" class="btn btn-dark">Edit</a>
+        </article>
+      </div>
+    </section>
+
+    <hr class="divider" style="margin-top:32px;" />
+
+    <!-- الأزرار السفلية -->
+    <div class="dashboard-actions">
+      <a class="action-button" href="manage-staff.html">Manage Staff Member</a>
+      <a class="action-button" href="addService.html">Add a New Service</a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-box">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Find us</h4>
+          <ul class="social">
+            <li><a href="#" aria-label="X">X</a></li>
+            <li><a href="#" aria-label="Facebook">f</a></li>
+            <li><a href="#" aria-label="LinkedIn">in</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col center">
+          <div class="brand">
+            <img src="images/sanad.png" alt="Sanad logo" />
+          </div>
+          <small>©2025 Sanad. All rights reserved</small>
+        </div>
+
+        <div class="footer-col right">
+          <h4>contact Info</h4>
+          <p>+966537282741</p>
+          <p><a href="mailto:sanadservices@gmail.com">sanadservices@gmail.com</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
