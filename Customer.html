@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Requests - Previous Service Requests</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+    <header class="navbar">
+    <div class="nav-container">
+	
+      <div class="nav-logo">
+      <a href="index.html">
+		<img src="images/sanad.png" alt="sanad logo">
+	  </a>
+    </div>
+	
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="services.html" class="border-left">Services</a>
+        <a href="Customer.html " class="current border-left">Customer</a>
+        <a href="provider-dashboard.html" class="border-left">Service Provider</a>
+        <a href="about.html" class="border-left">About Us</a>
+      </nav>
+    </div>
+  </header>
+  
+	<div class="nav-line"></div>
+	<nav class="breadcrumbs dark">
+		<ol class="trail nav-container">
+			<li><a href="index.html">Home</a></li>
+			<li>Customer</li>
+		</ol>
+    </nav>
+    <main>
+        <div class="container">
+            <h1 class="page-title">Previous Service Requests:</h1>
+            <section class="service-requests">
+                
+                <div class="request-card">
+                    <img src="images/Delivery.jpg" alt="Delivery Services" class="service-image">
+                    <p><span>Service Name:</span> Delivery Services </p>
+                    <p><span>Date of Request:</span>22/Oct/25</p>
+                    <p><span>Cost:</span> 35SR</p>
+                    <div class="card-actions">
+                        <a href="#" class="btn-reschedule">Reschedule</a>
+                        <button class="btn-provided">Provided</button>
+                    </div>
+                </div>
+
+                <div class="request-card">
+                    <img src="images/facilities(online).jfif" alt="facilities(online)" class="service-image">
+                    <p><span>Service Name:</span> Facilites (online)</p>
+                    <p><span>Date of Request:</span> 22/Mar/25</p>
+                    <p><span>Cost:</span> 80SR</p>
+                    <div class="card-actions">
+                        <a href="#rescheduleModal" class="btn-reschedule active-reschedule">Reschedule</a>
+                        <button class="btn-pending">Pending</button>
+                    </div>
+                </div>
+                
+                <div class="request-card">
+                    <img src="images/facilities(in-person).jpg" alt="facilities(In-person)" class="service-image">
+                    <p><span>Service Name:</span> Facilites (In-person)</p>
+                    <p><span>Date of Request:</span> 22/Apr/24</p>
+                    <p><span>Cost:</span> 120SR</p>
+                    <div class="card-actions">
+                         <a href="#" class="btn-reschedule">Reschedule</a>
+                        <button class="btn-unload">Unload</button>
+                    </div>
+                </div>
+
+                <div class="request-card">
+                    <img src="images/ReadingAssistance.jfif" alt="Reading Assistance" class="service-image">
+                    <p><span>Service Name:</span> Reading Assistance</p>
+                    <p><span>Date of Request:</span> 01/Jan/25</p>
+                    <p><span>Cost:</span> 45SR</p>
+                    <div class="card-actions">
+                        <a href="#rescheduleModal" class="btn-reschedule active-reschedule">Reschedule</a>
+                        <button class="btn-pending">Pending</button>
+                    </div>
+                </div>
+            </section>
+
+            <div class="dashboard-actions">
+                <a href="ServiceRequest.html" class="action-button">Add a New Service</a>
+                <a href="ServiceEvaultion.html" class="action-button">Service Evaluation</a>
+            </div>
+        </div>
+    </main>
+    
+    <div id="rescheduleModal" class="modal-overlay">
+        <div class="modal-content">
+            <a href="#" class="modal-close" style="text-decoration: none;">&times;</a>
+            <h3>Reschedule Service</h3>
+
+            <form class="reschedule-form">
+                <div class="form-group">
+                    <label for="new_date">Select New Date:</label>
+                    <input type="date" id="new_date" name="new_date" required>
+                </div>
+                
+                <button type="submit">Confirm Reschedule</button>
+            </form>
+
+        </div>
+    </div>
+
+ <footer class="site-footer">
+    <div class="container footer-box">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Find us</h4>
+          <ul class="social">
+            <li><a href="#" aria-label="X">X</a></li>
+            <li><a href="#" aria-label="Facebook">f</a></li>
+            <li><a href="#" aria-label="LinkedIn">in</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col center">
+          <div class="brand">
+            <img src="images/sanad.png" alt="Sanad logo">
+          </div>
+          <small>©2025 Sanad. All rights reserved</small>
+        </div>
+
+        <div class="footer-col right">
+          <h4>contact Info</h4>
+          <p>+966537282741</p>
+          <p><a href="mailto:sanadservices@gmail.com">sanadservices@gmail.com</a></p>
+        </div>
+      </div>
+
+    
+    </div>
+  </footer>
+
+</body>
+</html>
