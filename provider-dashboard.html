@@ -2,45 +2,48 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Service Provider</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sanad | Service Provider</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-   <!-- شريط التنقل -->
+  <!-- ===== Navbar مطابق لصفحة index ===== -->
   <header class="navbar">
     <div class="nav-container">
-	
       <div class="nav-logo">
-      <a href="index.html">
-		<img src="images/sanad.png" alt="sanad logo">
-	  </a>
-    </div>
-	
+        <a href="index.html">
+          <img src="images/sanad.png" alt="sanad logo">
+        </a>
+      </div>
       <nav class="nav-links">
-        <a href="index.html"  >Home</a>
-        <a href="services.html" >Services</a>
-        <a href="customer-dashboard.html" >Customer</a>
-        <a href="provider-dashboard.html" class="current">Service Provider</a>
-        <a href="about.html" >About Us</a>
+        <a href="index.html">Home</a>
+        <a href="services.html" class="border-left">Services</a>
+        <a href="customer-dashboard.html" class="border-left">Customer</a>
+        <a href="provider-dashboard.html" class="current ">Service Provider</a>
+        <a href="about.html" class="border-left">About Us</a>
       </nav>
     </div>
   </header>
 
+  <!-- الخط الأزرق اللي تحت الهيدر -->
   <div class="nav-line"></div>
 
+  <!-- ===== Breadcrumb مطابق لتصميم index ===== -->
+  <nav class="breadcrumbs dark">
+    <ol class="trail nav-container">
+      <li><a href="index.html">Home</a></li>
+      <li>Service Provider</li>
+    </ol>
+  </nav>
 
-	<nav class="breadcrumbs dark">
-		<ol class="trail nav-container">
-			<li>Home</li>
-		</ol>
-    </nav>
+  <!-- ===== Main محتوى الصفحة بدون تغيير ===== -->
+  
   <!-- Main -->
   <main class="container section provider">
-
+ <hr class="divider long">
     <h1>Seller</h1>
-    <hr class="divider long">
+    
     <h2>List of services:</h2>
 
     <section class="cards cols-3">

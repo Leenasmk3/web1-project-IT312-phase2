@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Manage Staff Members</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -20,7 +20,7 @@
       <nav class="nav-links">
         <a href="index.html">Home</a>
         <a href="services.html" class="border-left">Services</a>
-        <a href="customer-dashboard.html " class="border-left">Customer</a>
+        <a href="customer-dashboard.html" class="border-left">Customer</a>
         <a href="provider-dashboard.html" class="border-left">Service Provider</a>
         <a href="about.html" class="border-left">About Us</a>
       </nav>
@@ -40,16 +40,16 @@
 
   <main class="container">
 
-    <!-- ===== delete staff memeber===== -->
+    <!-- ===== Delete staff member ===== -->
     <section class="staff-box">
       <h2 class="section-title">Manage Staff Members Profile</h2>
 
       <form class="delete-form" action="#" method="post">
-        <ul class="staff-list" role="list">
+        <ul class="staff-list">
           <!-- Row 1 -->
           <li class="member-row">
             <label class="checkbox">
-              <input type="checkbox" name="delete" value="shahd" />
+              <input type="checkbox" name="delete[]" value="shahd">
               <span class="fake"></span>
             </label>
 
@@ -63,7 +63,7 @@
           <!-- Row 2 -->
           <li class="member-row">
             <label class="checkbox">
-              <input type="checkbox" name="delete[]" value="mohamad" />
+              <input type="checkbox" name="delete[]" value="mohamad">
               <span class="fake"></span>
             </label>
 
@@ -77,7 +77,7 @@
           <!-- Row 3 -->
           <li class="member-row">
             <label class="checkbox">
-              <input type="checkbox" name="delete[]" value="sara" />
+              <input type="checkbox" name="delete[]" value="sara">
               <span class="fake"></span>
             </label>
 
@@ -95,7 +95,7 @@
 
     <hr class="divider">
 
-    <!-- ===== إضافة عضو جديد ===== -->
+    <!-- ===== Add new member ===== -->
     <section class="join-section">
       <h2>Add New Staff Member</h2>
 
@@ -112,7 +112,7 @@
 
         <label>
           DoB
-          <input type="date" name="dob" placeholder="dd/mm/yyyy">
+          <input type="date" name="dob">
         </label>
 
         <label>
@@ -127,7 +127,6 @@
 
         <label>
           Skills
-          <!-- nested list style (user will type bullet-like list) -->
           <input type="text" name="skills" placeholder="e.g., Sign language, Scheduling">
         </label>
 
@@ -143,7 +142,7 @@
     </section>
   </main>
 
-  <!-- Footer (اختياري) -->
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-box">
       <div class="footer-grid">
@@ -164,13 +163,11 @@
         </div>
 
         <div class="footer-col right">
-          <h4>contact Info</h4>
+          <h4>Contact Info</h4>
           <p>+966537282741</p>
           <p><a href="mailto:sanadservices@gmail.com">sanadservices@gmail.com</a></p>
         </div>
       </div>
-
-    
     </div>
   </footer>
 
