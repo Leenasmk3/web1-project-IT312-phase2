@@ -531,6 +531,17 @@ button:hover {
   font-weight: 700; 
 }
 
+.team-scroll {/* 11111 */
+  display: flex;
+  gap: 20px;
+  overflow-x: scroll; 
+  padding: 15px 0;
+  width: 100%;
+  max-width: 100%;
+  min-width: 500px; 
+  scrollbar-width: auto;
+}
+
 .member-name {
   margin: 10px 0 6px;
   font-size: 1.05rem;  
@@ -540,6 +551,7 @@ button:hover {
 
 
 .member-card {
+	flex-shrink: 0; /* 11111 */
   background: #fff;
   border-radius: 8px;
   text-align: center;
@@ -606,12 +618,13 @@ button:hover {
 }
 
 /* الشبكة */
-.team-grid {
+.team-grid {/* 11111 */
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
   gap: 1rem;
   align-items: stretch;
+  overflow-x: auto;
 }
 
 /* البطاقة */
