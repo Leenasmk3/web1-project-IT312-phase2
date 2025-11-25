@@ -33,9 +33,9 @@
   <nav class="breadcrumbs dark" aria-label="Breadcrumb">
     <ol class="trail nav-container">
       <li><a href="index.html">Home</a></li>
-	    <li>&gt;</li>
+      <li>&gt;</li>
       <li><a href="ServiceProvider.html">Service Provider</a></li>
-	    <li>&gt;</li>
+      <li>&gt;</li>
       <li>Manage Staff Members</li>
     </ol>
   </nav>
@@ -46,12 +46,13 @@
     <section class="staff-box">
       <h2 class="section-title">Manage Staff Members Profile</h2>
 
-      <form class="delete-form" action="#" method="post">
+      <form id="deleteForm" class="delete-form" action="#" method="post">
         <ul class="staff-list">
+
           <!-- Row 1 -->
           <li class="member-row">
             <label class="checkbox">
-              <input type="checkbox" name="delete[]" value="shahd">
+              <input type="checkbox" name="member" value="shahd">
               <span class="fake"></span>
             </label>
 
@@ -59,13 +60,15 @@
               <img src="images/shahd.jpg" alt="Shahd photo">
             </div>
 
-            <div class="member-name"><h3><a href="profile-shahd.html" style="color: black;">Shahd</a></h3></div>
+            <div class="member-name">
+              <h3><a href="profile-shahd.html" style="color: black;">Shahd</a></h3>
+            </div>
           </li>
 
           <!-- Row 2 -->
           <li class="member-row">
             <label class="checkbox">
-              <input type="checkbox" name="delete[]" value="mohamad">
+              <input type="checkbox" name="member" value="mohamad">
               <span class="fake"></span>
             </label>
 
@@ -73,13 +76,15 @@
               <img src="images/mohamad.jpg" alt="Mohamad photo">
             </div>
 
-            <div class="member-name"> <h3><a href="profile-mohamad.html" style="color: black;">Mohamad</a></h3></div>
+            <div class="member-name">
+              <h3><a href="profile-mohamad.html" style="color: black;">Mohamad</a></h3>
+            </div>
           </li>
 
           <!-- Row 3 -->
           <li class="member-row">
             <label class="checkbox">
-              <input type="checkbox" name="delete[]" value="sara">
+              <input type="checkbox" name="member" value="sara">
               <span class="fake"></span>
             </label>
 
@@ -87,8 +92,11 @@
               <img src="images/sara.webp" alt="Sara photo">
             </div>
 
-            <div class="member-name"><h3><a href="profile-sara.html" style="color: black;">Sara</a></h3></div>
+            <div class="member-name">
+              <h3><a href="profile-sara.html" style="color: black;">Sara</a></h3>
+            </div>
           </li>
+
         </ul>
 
         <button type="submit" class="btn-dark small danger">Delete</button>
@@ -101,40 +109,41 @@
     <section class="join-section">
       <h2>Add New Staff Member</h2>
 
-      <form class="join-form" action="#" method="post" enctype="multipart/form-data">
+      <form id="addForm" class="join-form" action="#" method="post" enctype="multipart/form-data">
+
         <label>
           Name
-          <input type="text" name="name" placeholder="Enter name" required>
+          <input id="newName" type="text" name="name" placeholder="Enter name" required>
         </label>
 
         <label class="file-field">
           Photo
-          <input type="file" name="photo" accept="image/*">
+          <input id="newPhoto" type="file" name="photo" accept="image/*">
         </label>
 
         <label>
           DoB
-          <input type="date" name="dob">
+          <input id="newDob" type="date" name="dob">
         </label>
 
         <label>
           Email
-          <input type="email" name="email" placeholder="example@mail.com" required>
+          <input id="newEmail" type="email" name="email" placeholder="example@mail.com" required>
         </label>
 
         <label>
           Area of Expertise
-          <input type="text" name="expertise" placeholder="e.g., Accessibility, Translation">
+          <input id="newExpertise" type="text" name="expertise" placeholder="e.g., Accessibility, Translation">
         </label>
 
         <label>
           Skills
-          <input type="text" name="skills" placeholder="e.g., Sign language, Scheduling">
+          <input id="newSkills" type="text" name="skills" placeholder="e.g., Sign language, Scheduling">
         </label>
 
         <label class="full">
           Education
-          <input type="text" name="education" placeholder="e.g., B.Sc. in IT">
+          <input id="newEducation" type="text" name="education" placeholder="e.g., B.Sc. in IT">
         </label>
 
         <div class="form-actions full">
@@ -173,8 +182,8 @@
     </div>
   </footer>
 
-<script src="theme.js"></script>
+  <script src="theme.js"></script>
+  <script src="manage-members.js"></script>
 
 </body>
 </html>
-
