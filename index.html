@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Sanad | Home</title>
-  <link rel="stylesheet" href="style.css">
+  <link id="theme-style" rel="stylesheet" href="style-light.css">
 </head>
 
 <body>
@@ -16,6 +16,11 @@
 		<img src="images/sanad.png" alt="sanad logo">
 	  </a>
     </div>
+	
+	<label class="simple-switch">
+		<input type="checkbox" id="theme-toggle">
+		<span class="slider"></span>
+	</label>
 	
       <nav class="nav-links">
         <a href="index.html" class="current" >Home</a>
@@ -153,6 +158,6 @@
     </div>
   </footer>
 
-
+<script src="theme.js"></script>
 </body>
 </html>
