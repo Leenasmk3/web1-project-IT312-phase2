@@ -5,7 +5,7 @@
   <title>Sanad - Services</title>
 
   <!-- هنا السطر المهم للربط مع ملف CSS -->
-  <link rel="stylesheet" href="style.css"> 
+  <link id="theme-style" rel="stylesheet" href="style-light.css"> 
 </head>
 
 <body>
@@ -19,7 +19,7 @@
 	  </a>
     </div>
 	
-      <nav class="nav-links">
+      <nav class="nav-links">	  
         <a href="index.html">Home</a>
         <a href="services.html" class="current border-left">Services</a>
         <a href="customer-dashboard.html " class="border-left">Customer</a>
@@ -61,7 +61,7 @@
       </aside>
 
       <!-- المحتوى -->
-      <div class="content">
+      <div class="services-container content">
 
         <!-- Public Services -->
         <section class="category">
@@ -295,6 +295,73 @@
     </div>
   </footer>
 
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
 
+			let sortMenu = document.getElementById("sort");
+			let cards = document.querySelectorAll(".service-card");
+			let cardsArray = Array.from(cards);
+			let container = document.querySelector(".services-container");
+
+			function displayCards(list) {
+				container.innerHTML = "";
+				list.forEach(card => container.appendChild(card));
+			}
+
+			function sortAZ(list) {
+				return list.sort((a, b) => {
+					let A = a.querySelector(".value").textContent.trim().toLowerCase();
+					let B = b.querySelector(".value").textContent.trim().toLowerCase();
+					return A.localeCompare(B);
+				});
+			}
+
+			function sortZA(list) {
+				return list.sort((a, b) => {
+					let A = a.querySelector(".value").textContent.trim().toLowerCase();
+					let B = b.querySelector(".value").textContent.trim().toLowerCase();
+					return B.localeCompare(A);
+				});
+			}
+
+			function lowHigh(list) {
+				return list.sort((a, b) => {
+					let A = parseInt(a.querySelector(".price-badge").textContent);
+					let B = parseInt(b.querySelector(".price-badge").textContent);
+					return A - B;
+				});
+			}
+
+			function highLow(list) {
+				return list.sort((a, b) => {
+					let A = parseInt(a.querySelector(".price-badge").textContent);
+					let B = parseInt(b.querySelector(".price-badge").textContent);
+					return B - A;
+				});
+			}
+
+			sortMenu.addEventListener("change", function() {
+
+				// نضيف شكل الفرز فقط عند التغيير
+				container.classList.add("sorted");
+
+				if (this.value === "az") {
+					displayCards(sortAZ(cardsArray));
+				}
+				else if (this.value === "za") {
+					displayCards(sortZA(cardsArray));
+				}
+				else if (this.value === "plh") {
+					displayCards(lowHigh(cardsArray));
+				}
+				else if (this.value === "phl") {
+					displayCards(highLow(cardsArray));
+				}
+
+			});
+
+		});
+	</script>
+<script src="theme.js"></script>
 </body>
 </html>
