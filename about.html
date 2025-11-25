@@ -5,7 +5,7 @@
   <title>Sanad - aboutUs</title>
 
   <!-- هنا السطر المهم للربط مع ملف CSS -->
-  <link rel="stylesheet" href="style.css"> 
+  <link id="theme-style" rel="stylesheet" href="style-light.css"> 
 </head>
 
 <body>
@@ -208,5 +208,60 @@
     </div>
   </footer>
 
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+
+			const form = document.querySelector(".join-form");
+			
+			form.addEventListener("submit", function(e) {
+				e.preventDefault(); // إيقاف الإرسال مؤقتًا
+
+				let name = form.name.value.trim();
+				let expertise = form.expertise.value.trim();
+				let photo = form.photo.value;
+				let skills = form.skills.value.trim();
+				let dob = form.dob.value;
+				let education = form.education.value.trim();
+				let email = form.email.value.trim();
+				let message = form.message.value.trim();
+
+				// 1) التحقق من الحقول الفارغة
+				if (!name || !expertise || !photo || !skills || !dob || !education || !email || !message) {
+					alert("Please fill in all fields.");
+					return;
+				}
+
+				// 2) الاسم لا يبدأ برقم
+				if (!isNaN(name.charAt(0))) {
+					alert("Name cannot start with a number.");
+					return;
+				}
+
+				// 3) ملف الصورة لازم يكون صورة
+				const allowedTypes = ["image/jpeg", "image/png", "image/jpg", "image/webp"];
+				if (form.photo.files.length > 0) {
+					let fileType = form.photo.files[0].type;
+					if (!allowedTypes.includes(fileType)) {
+						alert("Photo must be an image file.");
+						return;
+					}
+				}
+
+				// 4) تاريخ الميلاد لا يكون بعد 2008
+				let year = new Date(dob).getFullYear();
+				if (year > 2008) {
+					alert("DOB must not be after 2008.");
+					return;
+				}
+
+				// 5) إذا كله صحيح → رسالة النجاح
+				alert("Thank you, " + name + "! Your application has been submitted.");
+
+				form.reset(); // تنظيف النموذج
+			});
+
+		});
+	</script>
+<script src="theme.js"></script>
 </body>
 </html>
