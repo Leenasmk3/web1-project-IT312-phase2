@@ -1577,3 +1577,75 @@ main {
 .btn-submit:hover {
     background-color: #222;
 }
+/* === Responsive for all devices (Easy Mode) === */
+img, iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+/* General container width */
+* {
+  box-sizing: border-box;
+}
+
+@media (max-width: 992px) {
+  .container,
+  .content,
+  main {
+    padding: 0 1rem;
+  }
+}
+
+/* === Mobile Phones === */
+@media (max-width: 768px) {
+
+  /* Navbar becomes vertical */
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .8rem;
+  }
+
+  .nav-links {
+    width: 100%;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .nav-links a {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border-left: none;
+    border-bottom: 1px solid #ccc;
+  }
+
+  /* Cards become full width */
+  .cards, .team-grid, .service-requests {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+
+  .service-card,
+  .member-card,
+  .request-card {
+    width: 100% !important;
+    max-width: 100%;
+  }
+
+  /* Forms full width */
+  form, .join-form, .addService-form {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  form label {
+    width: 100%;
+  }
+
+  /* Footer stacks vertically */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
