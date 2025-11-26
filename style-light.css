@@ -1722,3 +1722,27 @@ main {
   visibility: visible ;
   display: flex;
 }
+
+
+/* Services List Layout*/
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.services-list .service-card {
+  width: 100%;
+  margin: 0;
+}
+
+.services-list .service-card .card-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.services-list .service-card .btn.btn-dark {
+  margin-top: auto;
+  align-self: flex-start;
+}
