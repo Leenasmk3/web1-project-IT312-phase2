@@ -540,14 +540,16 @@ button:hover {
   font-weight: 700; 
 }
 
-.team-scroll {/* 11111 */
+.team-scroll {
   display: flex;
   gap: 20px;
-  overflow-x: scroll; 
+  overflow-x: auto;
   padding: 15px 0;
-  width: 100%;
-  max-width: 100%;
-  min-width: 500px; 
+
+  /* هذي الحركة الأساسية */
+  width: 120%;          /* يزيد العرض ويجبر السكروول يطلع */
+  max-width: none;      /* إلغاء التحديد */
+
   scrollbar-width: auto;
 }
 
