@@ -541,16 +541,14 @@ button:hover {
 }
 
 .team-scroll {
-  display: flex;
+  display: flex !important;
   gap: 20px;
-  overflow-x: auto;
+  overflow-x: auto !important; 
   padding: 15px 0;
-
-  /* هذي الحركة الأساسية */
-  width: 120%;          /* يزيد العرض ويجبر السكروول يطلع */
-  max-width: none;      /* إلغاء التحديد */
-
-  scrollbar-width: auto;
+  width: 100%;
+  max-width: 100%;
+  min-width: 500px; 
+  flex-wrap: nowrap !important; 
 }
 
 .member-name {
@@ -562,12 +560,12 @@ button:hover {
 
 
 .member-card {
-	flex-shrink: 0; /* 11111 */
+	flex-shrink: 0 !important; 
   background: #fff;
   border-radius: 8px;
   text-align: center;
   padding: 0 0 20px;
-  width: 280px;
+  width: 400px !important;
 }
 
 /* الشريط الأزرق */
