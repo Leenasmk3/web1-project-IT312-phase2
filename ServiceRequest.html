@@ -5,19 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add a new Request Service</title>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to the light theme stylesheet -->
     <link id="theme-style" rel="stylesheet" href="style-light.css"> 
 </head>
 <body>
 
+    <!-- Top navigation bar -->
     <header class="navbar">
     <div class="nav-container">
 	
+      <!-- Logo section -->
       <div class="nav-logo">
       <a href="index.html">
 		<img src="images/sanad.png" alt="sanad logo">
 	  </a>
     </div>
 	
+      <!-- Navigation links -->
       <nav class="nav-links">
         <a href="index.html">Home</a>
         <a href="services.html" class="border-left">Services</a>
@@ -27,7 +31,11 @@
       </nav>
     </div>
   </header>
+  
+	<!-- Line under the navigation -->
 	<div class="nav-line"></div>
+	
+	<!-- Breadcrumb navigation showing where you are on the site -->
 	<nav class="breadcrumbs dark">
 		<ol class="trail nav-container">
 			<li><a href="index.html">Home</a></li>
@@ -37,19 +45,26 @@
 			<li>Service Request</li>
 		</ol>
     </nav>
+    
+    <!-- Main content area -->
     <main>
         
+        <!-- Page title -->
         <h1 class="page-title">Add a new Request service:</h1>
 
+        <!-- Container for the request form -->
         <div class="request-container">
             
+            <!-- The actual form -->
             <form action="#" method="POST" class="request-form">
                 
+                <!-- Customer name input -->
                 <div class="form-group">
                     <label for="customer-name">Customer Name:</label>
                     <input type="text" id="customer-name" name="customerName" placeholder="Enter your name" required>
                 </div>
 
+                <!-- Service selection dropdown -->
                 <div class="form-group">
                     <label for="service-select">Choose a Service:</label>
                     <select id="service-select" name="serviceId" required>
@@ -67,16 +82,19 @@
                     </select>
                 </div>
                 
+                <!-- Due date picker -->
                 <div class="form-group">
                     <label for="due-date">Due Date:</label>
                     <input type="date" id="due-date" name="dueDate" required>
                 </div>
 
+                <!-- Request description text area -->
                 <div class="form-group description-group">
                     <label for="request-description">Request Description:</label>
                     <textarea id="request-description" name="requestDescription" rows="6" placeholder="Describe your request in detail..."></textarea>
                 </div>
                 
+                <!-- Form buttons (Cancel and Submit) -->
                 <div class="submit-area">
                     <button type="button" class="form-btn btn-cancel">Cancel</button>
                     <button type="submit" class="form-btn btn-submit">Submit</button>
@@ -88,10 +106,12 @@
         
     </main>
 
-   <!-- Footer -->
+   <!-- Footer section -->
 <footer class="site-footer">
     <div class="container footer-box">
       <div class="footer-grid">
+        
+        <!-- Social media links -->
         <div class="footer-col">
           <h4>Find us</h4>
           <ul class="social">
@@ -101,6 +121,7 @@
           </ul>
         </div>
 
+        <!-- Logo and copyright -->
         <div class="footer-col center">
           <div class="brand">
             <img src="images/sanad.png" alt="Sanad logo">
@@ -108,6 +129,7 @@
           <small>©2025 Sanad. All rights reserved</small>
         </div>
 
+        <!-- Contact information -->
         <div class="footer-col right">
           <h4>contact Info</h4>
           <p>+966537282741</p>
@@ -119,6 +141,7 @@
     </div>
   </footer>
   
+<!-- Load JavaScript files -->
 <script src="requestService.js"></script>
 <script src="theme.js"></script>
 
