@@ -127,34 +127,109 @@
 
 
    <script>
-// This script runs only on the Edit Service page
-document.addEventListener("DOMContentLoaded", function () {
-  // 1) get form fields
-  const nameInput = document.querySelector('input[name="name"]');
-  const priceInput = document.querySelector('input[name="price"]');
-  const qtyInput = document.querySelector('input[name="quantity"]');
-  const descInput = document.querySelector('textarea[name="description"]');
-  const form = document.querySelector(".addService-form");
+   
+   document.addEventListener("DOMContentLoaded", function() {
+  // Load the service data to edit
+  const editName = localStorage.getItem("edit_name");
+  const editPrice = localStorage.getItem("edit_price");
+  const editDescription = localStorage.getItem("edit_description");
+  const editIndex = localStorage.getItem("edit_index");
 
-  // 2) fill form with OLD values (coming from ServiceProvider)
-  if (nameInput)   nameInput.value   = localStorage.getItem("edit_name")        || "";
-  if (priceInput)  priceInput.value  = localStorage.getItem("edit_price")       || "";
-  if (qtyInput)    qtyInput.value    = localStorage.getItem("edit_quantity")    || "";
-  if (descInput)   descInput.value   = localStorage.getItem("edit_description") || "";
+  console.log("Loading edit data:", { editIndex, editName, editPrice, editDescription });
 
-  // 3) when user clicks Save Changes, store NEW values
-  form.addEventListener("submit", function (e) {
+  // Pre-fill the form with existing data
+  if (editName) {
+    document.querySelector("input[name='name']").value = editName;
+  }
+  if (editPrice) {
+    document.querySelector("input[name='price']").value = editPrice;
+  }
+  if (editDescription) {
+    document.querySelector("textarea[name='description']").value = editDescription;
+  }
+
+  // Handle form submission
+  document.querySelector(".addService-form").addEventListener("submit", function(e) {
     e.preventDefault();
 
-    localStorage.setItem("updated_name",      nameInput.value);
-    localStorage.setItem("updated_price",     priceInput.value);
-    localStorage.setItem("updated_quantity",  qtyInput.value);
-    localStorage.setItem("updated_description", descInput.value);
+    // Get the original index to know which service to update
+    const originalIndex = localStorage.getItem("edit_index");
+
+    // Get form values
+    const updatedName = document.querySelector("input[name='name']").value.trim();
+    const updatedPrice = document.querySelector("input[name='price']").value.trim();
+    const updatedDescription = document.querySelector("textarea[name='description']").value.trim();
+    const photoInput = document.querySelector("input[name='photo']");
+
+    console.log("Form values:", { updatedName, updatedPrice, updatedDescription });
+
+    // Validation
+    if (!updatedName || !updatedPrice || !updatedDescription) {
+      alert("Please fill in all fields!");
+      return;
+    }
+
+    if (/^[0-9]/.test(updatedName)) {
+      alert("Name cannot start with a number!");
+      return;
+    }
+
+    if (isNaN(updatedPrice) || Number(updatedPrice) <= 0) {
+      alert("Price must be a valid positive number!");
+      return;
+    }
+
+    // Handle photo upload if a new photo is selected
+    if (photoInput.files.length > 0) {
+      const file = photoInput.files[0];
+      
+      // Check file size (limit to 2MB)
+      if (file.size > 2 * 1024 * 1024) {
+        alert("Image size should be less than 2MB!");
+        return;
+      }
+
+      // Convert image to Data URL
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        // Save updated data with the new photo
+        saveUpdatedData(updatedName, updatedPrice, updatedDescription, e.target.result, originalIndex);
+      };
+      reader.readAsDataURL(file);
+    } else {
+      // No new photo selected, keep the existing photo
+      const services = JSON.parse(localStorage.getItem("services")) || [];
+      const existingPhoto = services[originalIndex] ? services[originalIndex].photo : null;
+      saveUpdatedData(updatedName, updatedPrice, updatedDescription, existingPhoto, originalIndex);
+    }
+  });
+
+  function saveUpdatedData(name, price, description, photoData, index) {
+    // Save updated data with the original index
+    localStorage.setItem("updated_name", name);
+    localStorage.setItem("updated_price", price);
+    localStorage.setItem("updated_description", description);
+    localStorage.setItem("updated_photo", photoData); // Save the photo data
+    localStorage.setItem("updated_index", index);
+
+    console.log("Saving updated data:", {
+      name: name,
+      price: price,
+      description: description,
+      hasPhoto: !!photoData,
+      index: index
+    });
+
+    // Clean up edit data
+    localStorage.removeItem("edit_name");
+    localStorage.removeItem("edit_price");
+    localStorage.removeItem("edit_description");
+    localStorage.removeItem("edit_index");
 
     alert("Service updated successfully!");
     window.location.href = "ServiceProvider.html";
-  });
-});
+  }
+}); 
 </script>
 
 
