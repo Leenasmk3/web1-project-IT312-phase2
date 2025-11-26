@@ -43,109 +43,14 @@
       <h1 class="page-title">Seller</h1>
     </section>
 
-    <section>
+
+
+    
+	<section>
       <h2 class="cards-title">List of services:</h2>
-
-      <div class="cards">
-        <!-- 1 -->
-        <article class="service-card">
-          <img src="images/ReadingAssistance.jfif" alt="Reading Assistance">
-          <div class="card-header">
-            <h3 class="row name-row"><span class="label">Name:</span> Reading Assistance</h3>
-            <span class="price-badge">45SR</span>
-          </div>
-          <p class="row"><span class="label">Description:</span> Support to read books and official documents in accessible formats.</p>
-          <div class="row quantity-row">
-            <span><span class="label">Quantity:</span> #13</span>
-            <a href="editService.html" class="btn btn-dark">Edit</a>
-          </div>
-        </article>
-
-        <!-- 2 -->
-        <article class="service-card">
-          <img src="images/AccessibleTransportation.jfif" alt="Accessible Transportation">
-          <div class="card-header">
-            <h3 class="row name-row"><span class="label">Name:</span> Accessible Transportation</h3>
-            <span class="price-badge">67SR</span>
-          </div>
-          <p class="row"><span class="label">Description:</span> Wheelchair-friendly vans for safe and comfortable mobility.</p>
-          <div class="row quantity-row">
-            <span><span class="label">Quantity:</span> #15</span>
-            <a href="editService.html" class="btn btn-dark">Edit</a>
-          </div>
-        </article>
-
-        <!-- 3 -->
-        <article class="service-card">
-          <img src="images/LearningCourses.jfif" alt="Learning Courses">
-          <div class="card-header">
-            <h3 class="row name-row"><span class="label">Name:</span> Learning Courses</h3>
-            <span class="price-badge">100SR</span>
-          </div>
-          <p class="row"><span class="label">Description:</span> Inclusive training and awareness sessions for skills development.</p>
-          <div class="row quantity-row">
-            <span><span class="label">Quantity:</span> #80</span>
-            <a href="editService.html" class="btn btn-dark">Edit</a>
-          </div>
-        </article>
-
-        <!-- 4 -->
-        <article class="service-card">
-          <img src="images/Consultations.jfif" alt="Consultations">
-          <div class="card-header">
-            <h3 class="row name-row"><span class="label">Name:</span> Consultations</h3>
-            <span class="price-badge">95SR</span>
-          </div>
-          <p class="row"><span class="label">Description:</span> Expert advice to choose the right services and accessibility plans.</p>
-          <div class="row quantity-row">
-            <span><span class="label">Quantity:</span> #20</span>
-            <a href="editService.html" class="btn btn-dark">Edit</a>
-          </div>
-        </article>
-
-        <!-- 5 -->
-        <article class="service-card">
-          <img src="images/AssistiveTools.jfif" alt="Assistive Tools">
-          <div class="card-header">
-            <h3 class="row name-row"><span class="label">Name:</span> Assistive Tools</h3>
-            <span class="price-badge">80SR</span>
-          </div>
-          <p class="row"><span class="label">Description:</span> Devices and equipment that support independence and daily tasks.</p>
-          <div class="row quantity-row">
-            <span><span class="label">Quantity:</span> #50</span>
-            <a href="editService.html" class="btn btn-dark">Edit</a>
-          </div>
-        </article>
-
-        <!-- 6 -->
-        <article class="service-card">
-          <img src="images/SignInterpreter(In-person).jfif" alt="Sign Interpreter (In-person)">
-          <div class="card-header">
-            <h3 class="row name-row"><span class="label">Name:</span> Sign Interpreter (In-person)</h3>
-            <span class="price-badge">120SR</span>
-          </div>
-          <p class="row"><span class="label">Description:</span> On-site interpreting for clinics, meetings, and official visits.</p>
-          <div class="row quantity-row">
-            <span><span class="label">Quantity:</span> #4</span>
-            <a href="editService.html" class="btn btn-dark">Edit</a>
-          </div>
-        </article>
-
-        <!-- 7 -->
-        <article class="service-card">
-          <img src="images/SignInterpreter(Online).jfif" alt="Sign Interpreter (Online)">
-          <div class="card-header">
-            <h3 class="row name-row"><span class="label">Name:</span> Sign Interpreter (Online)</h3>
-            <span class="price-badge">65SR</span>
-          </div>
-          <p class="row"><span class="label">Description:</span> Instant remote interpretation via certified sign language experts.</p>
-          <div class="row quantity-row">
-            <span><span class="label">Quantity:</span> #11</span>
-<a href="editService.html" class="btn btn-dark">Edit</a>
-          </div>
-        </article>
-      </div>
+	  <div class="services-list"></div> 
     </section>
+   
 
     <hr class="divider" style="margin-top:32px">
 
@@ -186,98 +91,106 @@
   </footer>
   
 <script src="theme.js"></script>
+  <script>
+ document.addEventListener("DOMContentLoaded", function () {
+  const services = JSON.parse(localStorage.getItem("services")) || [];
+  console.log(services); 
   
+  const container = document.querySelector(".services-list");
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
+  services.forEach((service, index) => {
+    const card = document.createElement("div");
+    card.classList.add("service-card");
+    card.dataset.index = index;
+    
+    // Check if service has a photo
+    const photoHTML = service.photo 
+      ? `<img src="${service.photo}" alt="${service.name}" style="width: 100%; height: 160px; object-fit: cover; border-radius: 10px; margin-bottom: 10px;">`
+      : `<div style="width: 100%; height: 160px; background: #f0f0f0; border-radius: 10px; margin-bottom: 10px; display: flex; align-items: center; justify-content: center; color: #666;">No Image</div>`;
+    
+    card.innerHTML = `
+      <div class="card-body">
+        ${photoHTML}
+        <div class="card-header">
+          <h3 class="name-row">${service.name}</h3>
+          <div class="price-badge">${service.price} SR</div>
+        </div>
+        <div class="quantity-row">
+          <span class="label">Quantity:</span> #1
+        </div>
+        <div class="row">
+          <span class="label">Description:</span> ${service.description}
+        </div>
+        <button class="btn btn-dark edit-btn" data-index="${index}">Edit</button>
+      </div>
+    `;
 
-  // ===== 1) Send old card data to editService.html when clicking Edit =====
-  let cards = document.querySelectorAll(".service-card");
+    container.appendChild(card);
+  });
 
-  for (let i = 0; i < cards.length; i++) {
-    let card = cards[i];
-    let editBtn = card.querySelector(".btn.btn-dark");
-
-    editBtn.addEventListener("click", function(e) {
+  // EDIT BUTTON HANDLER
+  container.addEventListener("click", function(e) {
+    if (e.target.classList.contains("edit-btn")) {
       e.preventDefault();
 
-      // get name
-      let name = card.querySelector(".name-row").textContent
-        .replace("Name:", "").trim();
+      const index = e.target.dataset.index;
+      const service = services[index];
+      
+      if (service) {
+        console.log("Editing service:", service);
+        
+        // Save the service data AND the index for editing
+        localStorage.setItem("edit_index", index);
+        localStorage.setItem("edit_name", service.name);
+        localStorage.setItem("edit_price", service.price);
+        localStorage.setItem("edit_description", service.description);
+        
+        // Go to edit page
+        window.location.href = "editService.html";
+      }
+    }
+  });
 
-      // get price
-      let price = card.querySelector(".price-badge").textContent
-        .replace("SR", "").trim();
-
-      // get quantity
-      let quantity = card.querySelector(".quantity-row span").textContent
-        .replace("Quantity:", "").replace("#", "").trim();
-
-      // get description
-      let desc = card.querySelector(".row:not(.name-row):not(.quantity-row)").textContent
-        .replace("Description:", "").trim();
-
-      // save values for edit page
-      localStorage.setItem("edit_name", name);
-      localStorage.setItem("edit_price", price);
-      localStorage.setItem("edit_quantity", quantity);
-      localStorage.setItem("edit_description", desc);
-
-      // go to edit page
-      window.location.href = "editService.html";
-    });
-  }
-
-  // ===== 2) When coming back from editService, update the card on this page =====
+  // CHECK FOR UPDATED SERVICES WHEN PAGE LOADS
   const updatedName = localStorage.getItem("updated_name");
 
   if (updatedName) {
+    const updatedIndex = localStorage.getItem("updated_index");
     const updatedPrice = localStorage.getItem("updated_price");
-    const updatedQty   = localStorage.getItem("updated_quantity");
-    const updatedDesc  = localStorage.getItem("updated_description");
+    const updatedDesc = localStorage.getItem("updated_description");
+    const updatedPhoto = localStorage.getItem("updated_photo"); // Get updated photo
 
-    let serviceCards = document.querySelectorAll(".service-card");
+    console.log("Found updated service:", updatedName, "at index:", updatedIndex);
 
-    for (let i = 0; i < serviceCards.length; i++) {
-      let c = serviceCards[i];
-      let cName = c.querySelector(".name-row").textContent
-        .replace("Name:", "").trim();
-
-      // find the card that matches the edited service
-      if (cName === updatedName) {
-
-        if (updatedPrice) {
-          let badge = c.querySelector(".price-badge");
-          badge.textContent = updatedPrice + "SR";
-        }
-
-        if (updatedQty) {
-          let qtySpan = c.querySelector(".quantity-row span");
-          qtySpan.innerHTML = '<span class="label">Quantity:</span> #' + updatedQty;
-        }
-
-        if (updatedDesc) {
-          let descRow = c.querySelector(".row:not(.name-row):not(.quantity-row)");
-          descRow.innerHTML = '<span class="label">Description:</span> ' + updatedDesc;
-        }
-
-        break;
+    if (updatedIndex !== null && services[updatedIndex]) {
+      // Update the service in the array
+      services[updatedIndex].name = updatedName;
+      services[updatedIndex].price = updatedPrice;
+      services[updatedIndex].description = updatedDesc;
+      
+      // Update photo only if a new one was provided
+      if (updatedPhoto) {
+        services[updatedIndex].photo = updatedPhoto;
       }
+
+      // Save the updated array back to localStorage
+      localStorage.setItem("services", JSON.stringify(services));
+
+      // Clear storage after applying updates
+      localStorage.removeItem("updated_name");
+      localStorage.removeItem("updated_price");
+      localStorage.removeItem("updated_description");
+      localStorage.removeItem("updated_photo");
+      localStorage.removeItem("updated_index");
+
+      // Reload the page to show the updated services
+      setTimeout(() => {
+        location.reload();
+      }, 100);
     }
-
-    // clear storage after applying updates
-    localStorage.removeItem("updated_name");
-    localStorage.removeItem("updated_price");
-    localStorage.removeItem("updated_quantity");
-    localStorage.removeItem("updated_description");
   }
-
 });
 </script>
-
-      
-
-
 
 </body>
 </html>
