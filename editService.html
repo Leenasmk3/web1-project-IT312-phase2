@@ -127,16 +127,15 @@
   </footer>
 
 
+  
    <script>
-   
-   document.addEventListener("DOMContentLoaded", function() {
-  // Load the service data to edit
-  const editName = localStorage.getItem("edit_name");
-  const editPrice = localStorage.getItem("edit_price");
-  const editDescription = localStorage.getItem("edit_description");
-  const editIndex = localStorage.getItem("edit_index");
 
-  console.log("Loading edit data:", { editIndex, editName, editPrice, editDescription });
+document.addEventListener("DOMContentLoaded", function() {
+ 
+  var editName = localStorage.getItem("edit_name");
+  var editPrice = localStorage.getItem("edit_price");
+  var editDescription = localStorage.getItem("edit_description");
+  var editIndex = localStorage.getItem("edit_index");
 
   // Pre-fill the form with existing data
   if (editName) {
@@ -149,49 +148,49 @@
     document.querySelector("textarea[name='description']").value = editDescription;
   }
 
-  // Handle form submission
+  
   document.querySelector(".addService-form").addEventListener("submit", function(e) {
     e.preventDefault();
 
     // Get the original index to know which service to update
-    const originalIndex = localStorage.getItem("edit_index");
+    var originalIndex = localStorage.getItem("edit_index");
 
-    // Get form values
-    const updatedName = document.querySelector("input[name='name']").value.trim();
-    const updatedPrice = document.querySelector("input[name='price']").value.trim();
-    const updatedDescription = document.querySelector("textarea[name='description']").value.trim();
-    const photoInput = document.querySelector("input[name='photo']");
+    // Get form values using DOM methods
+    var updatedName = document.querySelector("input[name='name']").value.trim();
+    var updatedPrice = document.querySelector("input[name='price']").value.trim();
+    var updatedDescription = document.querySelector("textarea[name='description']").value.trim();
+    var photoInput = document.querySelector("input[name='photo']");
 
-    console.log("Form values:", { updatedName, updatedPrice, updatedDescription });
-
-    // Validation
+    
     if (!updatedName || !updatedPrice || !updatedDescription) {
       alert("Please fill in all fields!");
       return;
     }
 
+ 
     if (/^[0-9]/.test(updatedName)) {
       alert("Name cannot start with a number!");
       return;
     }
 
+   
     if (isNaN(updatedPrice) || Number(updatedPrice) <= 0) {
       alert("Price must be a valid positive number!");
       return;
     }
 
-    // Handle photo upload if a new photo is selected
+    // Handle photo upload 
     if (photoInput.files.length > 0) {
-      const file = photoInput.files[0];
+      var file = photoInput.files[0];
       
-      // Check file size (limit to 2MB)
+      // Check file size
       if (file.size > 2 * 1024 * 1024) {
         alert("Image size should be less than 2MB!");
         return;
       }
 
       // Convert image to Data URL
-      const reader = new FileReader();
+      var reader = new FileReader();
       reader.onload = function(e) {
         // Save updated data with the new photo
         saveUpdatedData(updatedName, updatedPrice, updatedDescription, e.target.result, originalIndex);
@@ -199,29 +198,29 @@
       reader.readAsDataURL(file);
     } else {
       // No new photo selected, keep the existing photo
-      const services = JSON.parse(localStorage.getItem("services")) || [];
-      const existingPhoto = services[originalIndex] ? services[originalIndex].photo : null;
+      var services = JSON.parse(localStorage.getItem("services")) || [];
+      var existingPhoto = services[originalIndex] ? services[originalIndex].photo : null;
       saveUpdatedData(updatedName, updatedPrice, updatedDescription, existingPhoto, originalIndex);
     }
   });
 
   function saveUpdatedData(name, price, description, photoData, index) {
-    // Save updated data with the original index
-    localStorage.setItem("updated_name", name);
-    localStorage.setItem("updated_price", price);
-    localStorage.setItem("updated_description", description);
-    localStorage.setItem("updated_photo", photoData); // Save the photo data
-    localStorage.setItem("updated_index", index);
+    
+    var services = JSON.parse(localStorage.getItem("services")) || [];
+    
+    if (services[index]) {
+      services[index].name = name;
+      services[index].price = price;
+      services[index].description = description;
+      if (photoData) {
+        services[index].photo = photoData;
+      }
+      
+     
+      localStorage.setItem("services", JSON.stringify(services));
+    }
 
-    console.log("Saving updated data:", {
-      name: name,
-      price: price,
-      description: description,
-      hasPhoto: !!photoData,
-      index: index
-    });
-
-    // Clean up edit data
+    // Clean 
     localStorage.removeItem("edit_name");
     localStorage.removeItem("edit_price");
     localStorage.removeItem("edit_description");
@@ -232,8 +231,6 @@
   }
 }); 
 </script>
-
-
   <script src="theme.js"></script>
 </body>
 </html>
