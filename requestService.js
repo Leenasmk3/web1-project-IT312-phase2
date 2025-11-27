@@ -71,8 +71,8 @@ function validateForm(event) {
     }
 
     // Make sure the description is long enough
-    if (description.length < 20) {
-        errors.push(`The request description is too short. It must be at least 20 characters (Current: ${description.length}).`);
+    if (description.length < 100) {
+        errors.push(`The request description is too short. It must be at least 100 characters (Current: ${description.length}).`);
         requestDescriptionInput.style.border = '2px solid red';
     } else {
         requestDescriptionInput.style.border = '';

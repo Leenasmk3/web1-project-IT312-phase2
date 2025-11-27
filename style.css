@@ -1010,7 +1010,7 @@ button:hover {
   color: #222;
 }
 
-/*زر الحذف ر */
+
 .btn-dark.small {
   display: inline-block;
   padding: 6px 12px;
@@ -1023,13 +1023,36 @@ button:hover {
   background: #c43737;
 }
 
-/* تحسين استجابة الجوال */
+
 @media (max-width: 600px) {
   .member-row {
     grid-template-columns: 28px 56px 1fr;
     gap: 10px;
   }
 }
+
+/* Scroll inside delete members list */
+.staff-list {
+  max-height: 260px;     
+  overflow-y: auto;      
+  padding-right: 5px;    
+}
+
+
+.staff-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.staff-list::-webkit-scrollbar-track {
+  background: #e8e8e8;
+  border-radius: 10px;
+}
+
+.staff-list::-webkit-scrollbar-thumb {
+  background: #0c468b;
+  border-radius: 10px;
+}
+
 /* ====== Team Table with Nested Lists ====== */
 .team-table {
   width: 100%;
@@ -1445,7 +1468,7 @@ main {
 }
 
 
-/* تأثير التحديد (Selected effect) - التعبئة باللون الأصفر */
+/*  (Selected effect) -*/
 .stars input:checked ~ label::before {
     color: #ffc107;
     text-shadow: 0 0 2px #ffc107;
@@ -1466,15 +1489,14 @@ main {
     background-color: #1a4b8f;
     border-radius: 6px;
     border: 1px solid black;
-    font-family: serif, Arial, sans-serif; /* إضافة الخط العام لضمان التوحيد */
+    font-family: serif, Arial, sans-serif; 
 }
 .submit-btn:hover {
     background-color: #222; 
 }
 
-/* ---------------------------------------------------- */
-/* ⭐ تنسيقات خاصة بـ نموذج طلب الخدمة (ServiceRequest) ⭐     */
-/* ---------------------------------------------------- */
+/* ServiceReq */
+
 
 .request-container {
     background-color: white;

@@ -5,6 +5,34 @@
   <title>Manage Staff Members</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link id="theme-style" rel="stylesheet" href="style-light.css">
+<style>
+  /* Scroll  */
+  .staff-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 12px;
+  display: block;         
+  
+  max-height: 35vh;       
+  min-height: 80px;       
+  
+  overflow-y: auto;       
+  overflow-x: hidden;
+}
+
+
+.staff-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.staff-list::-webkit-scrollbar-thumb {
+  background: #0c468b;
+  border-radius: 10px;
+}
+
+</style>
+
+
 </head>
 <body>
 
@@ -96,6 +124,21 @@
               <h3><a href="profile-sara.html" style="color: black;">Sara</a></h3>
             </div>
           </li>
+<!-- Row 4 - Fahad -->
+<li class="member-row">
+  <label class="checkbox">
+    <input type="checkbox" name="member" value="fahad">
+    <span class="fake"></span>
+  </label>
+
+  <div class="avatar">
+    <img src="images/fahad..avif" alt="Fahad photo">
+  </div>
+
+  <div class="member-name">
+    <h3><a href="profile-fahad.html" style="color: black;">Fahad</a></h3>
+  </div>
+</li>
 
         </ul>
 
