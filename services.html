@@ -296,72 +296,98 @@
   </footer>
 
 	<script>
-		document.addEventListener("DOMContentLoaded", function() {
+		document.addEventListener("DOMContentLoaded", function () {
 
-			let sortMenu = document.getElementById("sort");
-			let cards = document.querySelectorAll(".service-card");
-			let cardsArray = Array.from(cards);
-			let container = document.querySelector(".services-container");
 
-			function displayCards(list) {
-				container.innerHTML = "";
-				list.forEach(card => container.appendChild(card));
-			}
+			const sortMenu = document.getElementById("sort");
 
-			function sortAZ(list) {
-				return list.sort((a, b) => {
-					let A = a.querySelector(".value").textContent.trim().toLowerCase();
-					let B = b.querySelector(".value").textContent.trim().toLowerCase();
-					return A.localeCompare(B);
-				});
-			}
+			
+			const cards = document.querySelectorAll(".service-card");
 
-			function sortZA(list) {
-				return list.sort((a, b) => {
-					let A = a.querySelector(".value").textContent.trim().toLowerCase();
-					let B = b.querySelector(".value").textContent.trim().toLowerCase();
-					return B.localeCompare(A);
-				});
-			}
 
-			function lowHigh(list) {
-				return list.sort((a, b) => {
-					let A = parseInt(a.querySelector(".price-badge").textContent);
-					let B = parseInt(b.querySelector(".price-badge").textContent);
-					return A - B;
-				});
-			}
+			let list = Array.from(cards);
 
-			function highLow(list) {
-				return list.sort((a, b) => {
-					let A = parseInt(a.querySelector(".price-badge").textContent);
-					let B = parseInt(b.querySelector(".price-badge").textContent);
-					return B - A;
-				});
-			}
+			
+			const box = document.querySelector(".services-container");
 
-			sortMenu.addEventListener("change", function() {
 
-				// نضيف شكل الفرز فقط عند التغيير
-				container.classList.add("sorted");
-
-				if (this.value === "az") {
-					displayCards(sortAZ(cardsArray));
+			
+			function show(list) {
+				box.innerHTML = "";
+				for (let i = 0; i < list.length; i++) {
+					box.appendChild(list[i]);
 				}
-				else if (this.value === "za") {
-					displayCards(sortZA(cardsArray));
-				}
-				else if (this.value === "plh") {
-					displayCards(lowHigh(cardsArray));
-				}
-				else if (this.value === "phl") {
-					displayCards(highLow(cardsArray));
+			}
+
+
+			// A - Z
+			function sortAZ() {
+				list.sort(function (a, b) {
+					let name1 = a.querySelector(".value").textContent.trim().toLowerCase();
+					let name2 = b.querySelector(".value").textContent.trim().toLowerCase();
+					return name1.localeCompare(name2);
+				});
+				show(list);
+			}
+
+
+			// Z - A
+			function sortZA() {
+				list.sort(function (a, b) {
+					let name1 = a.querySelector(".value").textContent.trim().toLowerCase();
+					let name2 = b.querySelector(".value").textContent.trim().toLowerCase();
+					return name2.localeCompare(name1);
+				});
+				show(list);
+			}
+
+
+			// السعر من الأقل للأعلى
+			function priceLowHigh() {
+				list.sort(function (a, b) {
+					let p1 = parseInt(a.querySelector(".price-badge").textContent);
+					let p2 = parseInt(b.querySelector(".price-badge").textContent);
+					return p1 - p2;
+				});
+				show(list);
+			}
+
+
+			// السعر من الأعلى للأقل
+			function priceHighLow() {
+				list.sort(function (a, b) {
+					let p1 = parseInt(a.querySelector(".price-badge").textContent);
+					let p2 = parseInt(b.querySelector(".price-badge").textContent);
+					return p2 - p1;
+				});
+				show(list);
+			}
+
+
+			
+			sortMenu.addEventListener("change", function () {
+
+				box.classList.add("sorted");
+
+				if (sortMenu.value == "az") {
+					sortAZ();
+				} 
+				else if (sortMenu.value == "za") {
+					sortZA();
+				} 
+				else if (sortMenu.value == "plh") {
+					priceLowHigh();
+				} 
+				else if (sortMenu.value == "phl") {
+					priceHighLow();
 				}
 
 			});
 
 		});
 	</script>
-<script src="theme.js"></script>
+	
+	<script src="theme.js"></script>
+	
 </body>
 </html>
