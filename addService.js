@@ -3,17 +3,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
   form.addEventListener("submit", function (e) {
     e.preventDefault(); 
+ 
+    // get fields
+let name = form.querySelector("input[name='name']").value.trim();
+let price = form.querySelector("input[name='Price']").value.trim();
+let photoInput = form.querySelector("input[name='photo']");
+let description = form.querySelector("textarea[name='message']").value.trim();
 
-    // Get form values
-    var name = form.querySelector("input[name='name']").value.trim();
-    var price = form.querySelector("input[name='Price']").value.trim();
-    var description = form.querySelector("textarea[name='message']").value.trim();
-    var photoInput = form.querySelector("input[name='photo']");
-    
-    // VALIDATION 
-    if (!name || !price || !description) {
-      alert("Please fill in all required fields!");
-      return;
+
+// Collect missing fields
+let missing = [];
+if (!name) missing.push("Name");
+if (!price) missing.push("Price");
+if (!description) missing.push("Description");
+
+//alert missing field
+    var photoSelected = photoInput && photoInput.files && photoInput.files.length > 0;
+    if (!photoSelected) missing.push("Photo");
+
+    if (missing.length > 0) {
+      var plural = missing.length > 1 ? "fields are" : "field is";
+      alert("The following required " + plural + " missing:\n\n- " + missing.join("\n- "));
+      return;  // stop form
     }
 
     // Using RegEx to check if name starts with number
@@ -66,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
       photo: photoData
     };
 
-    // Add new service to the array using array methods 
+    // Add new service to the array 
     services.push(newService);
 
     localStorage.setItem("services", JSON.stringify(services));
@@ -81,18 +92,3 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 1000);
   }
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
