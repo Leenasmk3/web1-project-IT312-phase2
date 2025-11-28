@@ -201,39 +201,38 @@
 	<script>
 		document.addEventListener("DOMContentLoaded", function () {
 
-			
-			var form = document.querySelector(".join-form");
+			const form = document.querySelector(".join-form");
 
 			form.addEventListener("submit", function (e) {
 
-				
-				e.preventDefault();
+				e.preventDefault();  
 
-				
-				var name = form.name.value.trim();
-				var expertise = form.expertise.value.trim();
-				var photo = form.photo.value;
-				var skills = form.skills.value.trim();
-				var dob = form.dob.value;
-				var education = form.education.value.trim();
-				var email = form.email.value.trim();
-				var message = form.message.value.trim();
+				let name = form.name.value.trim();
+				let expertise = form.expertise.value.trim();
+				let photo = form.photo.value;
+				let skills = form.skills.value.trim();
+				let dob = form.dob.value;
+				let education = form.education.value.trim();
+				let email = form.email.value.trim();
+				let message = form.message.value.trim();
 
 				
 				if (!name || !expertise || !photo || !skills || !dob || !education || !email || !message) {
 					alert("Please fill in all fields.");
 					return;
 				}
+
 				
 				if (!isNaN(name.charAt(0))) {
 					alert("Name cannot start with a number.");
 					return;
 				}
+
 				
-				var allowedTypes = ["image/jpeg", "image/png", "image/jpg", "image/webp"];
+				const allowedTypes = ["image/jpeg", "image/png", "image/jpg", "image/webp"];
 
 				if (form.photo.files.length > 0) {
-					var fileType = form.photo.files[0].type;
+					let fileType = form.photo.files[0].type;
 
 					if (!allowedTypes.includes(fileType)) {
 						alert("Photo must be an image file.");
@@ -241,18 +240,18 @@
 					}
 				}
 
-		
-				var year = new Date(dob).getFullYear();
+				
+				let year = new Date(dob).getFullYear();
 
 				if (year > 2008) {
 					alert("DOB must not be after 2008.");
 					return;
 				}
 
-			
+				
 				alert("Thank you, " + name + "! Your request has been submitted successfully.");
 
-
+			
 				form.reset();
 			});
 
