@@ -1,3 +1,6 @@
+
+// JavaScript Theme Toggle
+
 const toggle = document.getElementById("theme-toggle");
 const themeLink = document.getElementById("theme-style");
 
