@@ -91,7 +91,7 @@ document.getElementById("addForm").onsubmit = function (e) {
         alert("Education is required");
         return;
     }
-		const allowedTypes = ["image/jpeg", "image/png", "image/jpg", "image/webp"];
+		
     // If validation passes, show confirmation with full information
     let confirmationMessage = "Staff Member Added Successfully!\n\n";
     confirmationMessage += "Name: " + name + "\n";
@@ -118,7 +118,7 @@ document.getElementById("addForm").onsubmit = function (e) {
 
         <div class="avatar">
             <!-- Default placeholder image for newly added staff -->
-            <img src="images/default.jpg" alt="${name} photo">
+            <img src="images/*.jpg" alt="${name} photo">
         </div>
 
         <div class="member-name">
