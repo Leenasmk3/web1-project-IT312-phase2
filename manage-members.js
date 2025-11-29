@@ -10,7 +10,7 @@ document.getElementById("deleteForm").onsubmit = function (e) {
 
     // If no staff member is selected, show a warning
     if (selectedMembers.length === 0) {
-        alert("Please select at least one staff member to delete.");
+        alert("Please select at least one offer");
         return;
     }
 
@@ -52,7 +52,7 @@ document.getElementById("addForm").onsubmit = function (e) {
     const expertise = document.getElementById("newExpertise").value.trim();
     const education = document.getElementById("newEducation").value.trim();
 
-    // VALIDATION 1: Name is required and must be full name
+    //  Name is required and must be full name
     if (!name) {
         alert("Name is required");
         return;
@@ -62,36 +62,36 @@ document.getElementById("addForm").onsubmit = function (e) {
         return;
     }
 
-    // VALIDATION 2: Email is required
+    // Email is required
     if (!email) {
         alert("Email is required");
         return;
     }
 
-    // VALIDATION 3: Date of Birth is required
+    //  Date of Birth is required
     if (!dob) {
         alert("Date of Birth is required");
         return;
     }
 
-    // VALIDATION 4: Area of Expertise is required
+    //  Area of Expertise is required
     if (!expertise) {
         alert("Area of Expertise is required");
         return;
     }
 
-    // VALIDATION 5: Skills are required
+    //  Skills are required
     if (!skills) {
         alert("Skills are required");
         return;
     }
 
-    // VALIDATION 6: Education is required
+    // Education is required
     if (!education) {
         alert("Education is required");
         return;
     }
-
+		const allowedTypes = ["image/jpeg", "image/png", "image/jpg", "image/webp"];
     // If validation passes, show confirmation with full information
     let confirmationMessage = "Staff Member Added Successfully!\n\n";
     confirmationMessage += "Name: " + name + "\n";
