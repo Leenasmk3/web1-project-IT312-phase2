@@ -1,4 +1,3 @@
-
 // DELETE STAFF MEMBERS
 
 
@@ -34,63 +33,12 @@ document.getElementById("deleteForm").onsubmit = function (e) {
 
 // ADD NEW STAFF MEMBER
 
-
-// When the add form is submitted...
-document.getElementById("addForm").onsubmit = function (e) {
-    e.preventDefault(); // Prevent page reload
-
-    // Read all field values from the form
-    const name   = document.getElementById("newName").value.trim();
-    const email  = document.getElementById("newEmail").value.trim();
-    const dob    = document.getElementById("newDob").value;
-    const skills = document.getElementById("newSkills").value.trim();
-
-    // Simple validation: Name + Email MUST be filled
-    if (!name || !email) {
-        alert("Name and Email are required fields.");
-        return;
-    }
-
-    // Select the staff list inside the delete form
-    const staffList = document.querySelector("#deleteForm ul");
-
-    // Create a new staff member row (same structure as the existing ones)
-    const li = document.createElement("li");
-    li.classList.add("member-row");
-
-    li.innerHTML = `
-        <label class="checkbox">
-            <input type="checkbox" name="member" value="${name}">
-            <span class="fake"></span>
-        </label>
-
-        <div class="avatar">
-            <!-- Default placeholder image for newly added staff -->
-            <img src="images/default.jpg" alt="${name} photo">
-        </div>
-
-        <div class="member-name">
-            <h3><a href="#" style="color: black;">${name}</a></h3>
-        </div>
-    `;
-
-    // Add the new staff entry to the top list
-    staffList.appendChild(li);
-
-    // Confirm to the user
-    alert("New staff member added successfully!");
-
-    // Clear all form fields after adding
-    document.getElementById("newName").value = "";
-    document.getElementById("newEmail").value = "";
-    document.getElementById("newDob").value = "";
-    document.getElementById("newSkills").value = "";
-    document.getElementById("newExpertise").value = "";
-    document.getElementById("newEducation").value = "";
-};
-
-//ADD NEW STAFF MEMBER
-
+// Helper function to validate full name (no numbers or special characters)
+function isValidFullName(name) {
+    // Regular expression: only letters and spaces allowed
+    const namePattern = /^[a-zA-Z\s]+$/;
+    return namePattern.test(name);
+}
 
 // When the add form is submitted...
 document.getElementById("addForm").onsubmit = function (e) {
@@ -104,24 +52,43 @@ document.getElementById("addForm").onsubmit = function (e) {
     const expertise = document.getElementById("newExpertise").value.trim();
     const education = document.getElementById("newEducation").value.trim();
 
-    // Array to collect validation errors
-    let errors = [];
-
-    // VALIDATION 1: Name is required and must be full name (no numbers or special characters)
+    // VALIDATION 1: Name is required and must be full name
     if (!name) {
-        errors.push("- Name is required");
-    } else if (!isValidFullName(name)) {
-        errors.push("- Name is not full name, have numbers or characters (? ! @)");
+        alert("Name is required");
+        return;
+    }
+    if (!isValidFullName(name)) {
+        alert("Name must be a full name with letters only");
+        return;
     }
 
     // VALIDATION 2: Email is required
     if (!email) {
-        errors.push("- Email is required");
+        alert("Email is required");
+        return;
     }
 
-    // If there are validation errors, show alert and stop
-    if (errors.length > 0) {
-        alert("Please fix the following issues:\n\n" + errors.join("\n"));
+    // VALIDATION 3: Date of Birth is required
+    if (!dob) {
+        alert("Date of Birth is required");
+        return;
+    }
+
+    // VALIDATION 4: Area of Expertise is required
+    if (!expertise) {
+        alert("Area of Expertise is required");
+        return;
+    }
+
+    // VALIDATION 5: Skills are required
+    if (!skills) {
+        alert("Skills are required");
+        return;
+    }
+
+    // VALIDATION 6: Education is required
+    if (!education) {
+        alert("Education is required");
         return;
     }
 
