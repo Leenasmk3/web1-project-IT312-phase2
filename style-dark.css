@@ -1630,7 +1630,7 @@ main {
   padding: 15px 0;
   margin-top: 20px;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
-  color: #ffffff 
+  color: #ffffff ;
   width: 100%;
   grid-column: 1 / -1;
 }
@@ -1639,7 +1639,7 @@ main {
   font-size: 0.95rem;
   font-weight: 500;
   margin-bottom: 5px;
-  color: #ffffff 
+  color: #ffffff ;
 }
 
 .clock-time {
@@ -1647,7 +1647,7 @@ main {
   font-weight: 700;
   letter-spacing: 1px;
   font-family: 'Courier New', monospace; 
-  color: #ffffff 
+  color: #ffffff ;
 }
 
     /* Responsive adjustments */
