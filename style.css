@@ -1998,3 +1998,68 @@ textarea:focus {
   outline: 2px solid #2962c2;
   outline-offset: 2px;
 }
+
+/* ===== Responsive Navbar & Footer & Customer ===== */
+@media screen and (max-width: 768px) {
+
+  /* Navbar */
+  .nav-container {
+    flex-direction: column;     
+    align-items: flex-start;
+    padding: 0.5rem 1rem;
+    gap: 0.5rem;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;           
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .nav-links a {
+    padding: 0.4rem 0.8rem;      
+  }
+
+  .service-requests {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dashboard-actions {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .action-button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .footer-col.right {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+  .service-requests {
+    grid-template-columns: 1fr;
+  }
+
+  .card-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .card-actions a,
+  .card-actions button {
+    margin-right: 0;
+    width: 100%;
+    text-align: center;
+  }
+}
