@@ -1599,155 +1599,503 @@ main {
 
 /* RESPONSIVE WEB DESIGN ADDITION */
 
+/* ===== BASE RESPONSIVE STYLES ===== */
 
-/* =========================
-   RESPONSIVE STYLES – SANAD
-   ========================= */
+/* Make all images responsive by default */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 
-/* ========= 1) Navbar & Breadcrumbs ========= */
+/* Flexible containers */
+.container,
+.nav-container,
+.content {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Responsive iframe (for maps, videos) */
+iframe {
+  max-width: 100%;
+  height: auto;
+  min-height: 300px;
+}
+
+.map iframe {
+  width: 100%;
+  height: 400px;
+}
+
+/* ===== RESPONSIVE NAVIGATION ===== */
+
+/* Mobile menu toggle button */
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: 2px solid #114083;
+  color: #114083;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-left: auto;
+}
+
+.mobile-menu-toggle:hover {
+  background-color: #eef5ff;
+}
+
+/* ===== RESPONSIVE CARDS/GRID ===== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+}
+
+/* ===== RESPONSIVE TABLES ===== */
+table {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  display: block;
+}
+
+/* Make table scrollable on small screens */
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* ===== MEDIA QUERIES ===== */
+
+/* ========== TABLET & SMALL DESKTOP ========== */
+@media (max-width: 1024px) {
+  .nav-container {
+    padding: 0.5rem 1rem;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+
+  .cards {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.25rem;
+  }
+
+  /* Adjust font sizes for better readability */
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+}
+
+/* ========== TABLET ======== */
 @media (max-width: 768px) {
+  /* Navigation becomes stacked */
+  .navbar {
+    position: relative;
+  }
 
   .nav-container {
+    flex-wrap: wrap;
+    padding: 0.75rem 1rem;
+  }
+
+  .nav-logo {
+    order: 1;
+  }
+
+  .simple-switch {
+    order: 2;
+    margin-left: auto;
+    margin-right: 1rem;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+    order: 3;
+  }
+
+  .nav-links {
+    order: 4;
+    width: 100%;
     flex-direction: column;
+    gap: 0;
+    margin-left: 0;
+    margin-top: 1rem;
+    display: none; /* Hidden by default on mobile */
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-left: none !important;
+    border-top: 1px solid #c8d7eb;
+  }
+
+  .nav-links a:first-child {
+    border-top: none;
+  }
+
+  /* Cards become 2 columns on tablet */
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  /* Footer adjustments */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .footer-col.right,
+  .footer-col.center {
+    text-align: center;
+  }
+
+  /* Vision section adjustments */
+  .vision {
+    padding: 2rem 1rem;
+  }
+
+  .vision-text {
+    max-width: 100%;
+  }
+
+  /* Service cards */
+  .service-card {
+    padding: 1rem;
+  }
+
+  /* Map container */
+  .map iframe {
+    height: 300px;
+  }
+}
+
+/* ========== MOBILE PHONES ========== */
+@media (max-width: 480px) {
+  /* Typography adjustments */
+  body {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.15rem;
+  }
+
+  /* Navigation */
+  .nav-logo img {
+    height: 45px;
+  }
+
+  .nav-container {
+    padding: 0.5rem 0.75rem;
+  }
+
+  /* Cards become single column on mobile */
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  /* Service cards */
+  .service-card {
+    padding: 0.875rem;
+  }
+
+  .service-card img {
+    max-height: 200px;
+    object-fit: cover;
+  }
+
+  /* Buttons */
+  button {
+    padding: 10px 16px;
+    font-size: 14px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Forms */
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="date"],
+  input[type="time"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 14px;
+  }
+
+  /* Tables - make them scroll horizontally */
+  table {
+    font-size: 13px;
+  }
+
+  table thead {
+    display: none; /* Hide header on very small screens */
+  }
+
+  table tr {
+    display: block;
+    margin-bottom: 1rem;
+    border: 1px solid #c8d7eb;
+    border-radius: 8px;
+    padding: 0.5rem;
+  }
+
+  table td {
+    display: block;
+    text-align: right;
+    padding: 0.5rem;
+    border: none;
+  }
+
+  table td:before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+  }
+
+  /* Footer */
+  .footer-grid {
+    gap: 1.5rem;
+  }
+
+  .footer-col h4 {
+    font-size: 1.1rem;
+  }
+
+  .footer-col p,
+  .footer-col a {
+    font-size: 14px;
+  }
+
+  /* Social links */
+  .social {
+    gap: 1rem;
+  }
+
+  /* Map */
+  .map iframe {
+    height: 250px;
+  }
+
+  /* Breadcrumbs */
+  .breadcrumbs {
+    font-size: 13px;
+    padding: 0.5rem 0.75rem;
+  }
+
+  /* Vision section */
+  .vision {
+    padding: 1.5rem 0.75rem;
+  }
+
+  .vision-text p {
+    font-size: 15px;
+  }
+}
+
+/* ==========SMALL DEVICES========== */
+@media (max-width: 380px) {
+  body {
+    font-size: 13px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  .nav-logo img {
+    height: 40px;
+  }
+
+  .nav-container {
+    padding: 0.5rem;
+  }
+
+  button {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  .service-card img {
+    max-height: 180px;
+  }
+
+  .map iframe {
+    height: 200px;
+  }
+}
+
+/* ===== LANDSCAPE ORIENTATION ===== */
+@media (max-width: 768px) and (orientation: landscape) {
+  .nav-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-links a {
+    width: auto;
+    min-width: 120px;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ===== ACCESSIBILITY IMPROVEMENTS ===== */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #2962c2;
+  outline-offset: 2px;
+}
+
+/* ===== Responsive Navbar & Footer & Customer ===== */
+@media screen and (max-width: 768px) {
+
+  /* Navbar */
+  .nav-container {
+    flex-direction: column;     
     align-items: flex-start;
     padding: 0.5rem 1rem;
     gap: 0.5rem;
   }
 
   .nav-links {
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    flex-wrap: wrap;           
+    justify-content: center;
     gap: 10px;
   }
 
   .nav-links a {
-    padding: 0.4rem 0.8rem;
+    padding: 0.4rem 0.8rem;      
   }
 
-  .breadcrumbs.dark .trail {
-    padding: 0 1rem;
-    font-size: 0.85rem;
+  .service-requests {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dashboard-actions {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .action-button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .footer-col.right {
+    text-align: center;
   }
 }
 
-/* ========= 2) Services Page ========= */
+@media screen and (max-width: 480px) {
 
-/* موبايل – كرت واحد في الصف */
-@media (max-width: 600px) {
+  .service-requests {
+    grid-template-columns: 1fr;
+  }
 
-  .services-layout {
+  .card-actions {
     flex-direction: column;
+    gap: 8px;
   }
 
-  .sort-box {
+  .card-actions a,
+  .card-actions button {
+    margin-right: 0;
     width: 100%;
-    margin-bottom: 16px;
-  }
-
-  .cards {
-    justify-content: center;
-  }
-
-  .service-card {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .last-row {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .last-row .service-card {
-    width: 100%;
+    text-align: center;
   }
 }
-
-/* تابلت – الكروت أعرض شوي */
-@media (min-width: 601px) and (max-width: 900px) {
-
-  .services-layout {
-    flex-direction: column;
-  }
-
-  .sort-box {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .service-card {
-    width: 47%;
-  }
-
-  .last-row {
-    flex-direction: row;
-  }
-
-  .last-row .service-card {
-    width: 90%;
-  }
-}
-
-/* ========= 3) About Us – Team cards & Join form ========= */
+/* --- Responsive: Team Profile Table --- */
 @media (max-width: 768px) {
-
-  .about-intro,
-  .vision {
-    width: 98%;
-    padding: 1rem;
-  }
-
-  .team-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .member-card {
-    width: 90%;
-  }
-
-  .join-form {
-    max-width: 100%;
-    padding: 1rem;
-  }
-
-  .join-form label {
-    flex: 0 0 100%;
-  }
-
-  .join-form .full {
-    flex: 0 0 100%;
-  }
-
-  .join-form button {
-    width: 80%;
-  }
-}
-
-/* ========= 4) Team Profile Table ========= */
-/* ما يوسّع الصفحة، بس الجدول نفسه يطلع له سكرول أفقي */
-@media (max-width: 768px) {
-
+ ا 
   .team-table {
     display: block;
     width: 100%;
     overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    font-size: 0.85rem;
+    -webkit-overflow-scrolling: touch; 
+    font-size: 0.85rem;                
   }
 
   .team-table th,
   .team-table td {
-    white-space: nowrap;
-    padding: 6px 8px;
+    white-space: nowrap;   
+    padding: 6px 8px;     
   }
 }
 
-/* ========= 5) Customer Dashboard ========= */
+/* --- Responsive layout for Customer cards --- */
 
-/* موبايل – كرت واحد في الصف */
+@media (min-width: 901px) {
+  .service-requests {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) and (min-width: 601px) {
+  .service-requests {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 600px) {
-
   .service-requests {
     grid-template-columns: 1fr;
   }
@@ -1763,94 +2111,20 @@ main {
     margin-right: 0;
     text-align: center;
   }
-
-  .dashboard-actions {
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .dashboard-actions a {
+}
+/* --- Responsive: Team Members table --- */
+@media (max-width: 768px) {
+  .team-table {
+    display: block;
     width: 100%;
-    text-align: center;
-  }
-}
-
-/* تابلت – كرتين في الصف */
-@media (min-width: 601px) and (max-width: 900px) {
-  .service-requests {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* ديسكتوب – 3 كروت (لو رجعتي للتعريف الأساسي في الأعلى يبقى زي ما هو) */
-@media (min-width: 901px) {
-  .service-requests {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* ========= 6) Provider – Manage Staff ========= */
-@media (max-width: 768px) {
-  .staff-box {
-    margin: 16px auto;
-    padding: 12px;
+    overflow-x: auto;              
+    -webkit-overflow-scrolling: touch;
+    font-size: 0.85rem;          
   }
 
-  .member-row {
-    grid-template-columns: 28px 56px 1fr;
-    gap: 8px;
-  }
-}
-
-/* ========= 7) Forms: Add Service / Join / Others ========= */
-@media (max-width: 768px) {
-
-  .addService-form {
-    max-width: 100%;
-    margin: 0 8px;
-    padding: 16px;
-  }
-
-  .addService-form label {
-    flex: 0 0 100%;
-  }
-
-  .addService-form .full {
-    flex: 0 0 100%;
-  }
-
-  .addService-form button {
-    width: 80%;
-  }
-}
-
-/* ========= 8) Footer ========= */
-@media (max-width: 768px) {
-
-  .footer-grid {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 16px;
-  }
-
-  .footer-col.right {
-    text-align: center;
-  }
-}
-
-/* ========= 9) General small-screen tweaks ========= */
-@media (max-width: 480px) {
-
-  body {
-    font-size: 14px;
-  }
-
-  h1,
-  h2 {
-    font-size: 1.4rem;
-  }
-
-  .nav-links a {
-    padding: 0.3rem 0.5rem;
+  .team-table th,
+  .team-table td {
+    white-space: nowrap;           /* ما يلف النص تحت بعض */
+    padding: 6px 8px;             
   }
 }
