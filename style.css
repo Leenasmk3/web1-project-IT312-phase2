@@ -2080,8 +2080,16 @@ textarea:focus {
     padding: 6px 8px;     
   }
 }
-/* --- Responsive: Customer Dashboard Cards --- */
-@media (max-width: 900px) {
+
+/* --- Responsive layout for Customer cards --- */
+
+@media (min-width: 901px) {
+  .service-requests {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) and (min-width: 601px) {
   .service-requests {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -2099,8 +2107,24 @@ textarea:focus {
 
   .card-actions a,
   .card-actions button {
-    margin-right: 0;
     width: 100%;
+    margin-right: 0;
     text-align: center;
+  }
+}
+/* --- Responsive: Team Members table --- */
+@media (max-width: 768px) {
+  .team-table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;              
+    -webkit-overflow-scrolling: touch;
+    font-size: 0.85rem;          
+  }
+
+  .team-table th,
+  .team-table td {
+    white-space: nowrap;          
+    padding: 6px 8px;             
   }
 }
