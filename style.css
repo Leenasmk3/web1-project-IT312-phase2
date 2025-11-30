@@ -79,7 +79,7 @@ button:hover {
   justify-content: flex-start;
 }
 
-/* شعار Sanad */
+
 .nav-logo a {
   font-size: 1.5rem;
   font-weight: bold;
@@ -87,7 +87,7 @@ button:hover {
   text-decoration: none;
 }
 
-/* الروابط */
+
 .nav-links {
  margin-left:auto ;
   display: flex;
@@ -118,19 +118,19 @@ button:hover {
   cursor: default;
 }
 
-/* عند المرور hover */
+
 .nav-links a:hover {
   border-bottom: 2px solid #000;
 }
 
-/* الصفحة الحالية */
+
 .nav-links a.current {
   border-bottom: 2px solid #000;
   font-weight: 600;
   
 }
 
-/* الخط الغامق تحت الشريط */
+
 .nav-line {
   height: 5px;
   background-color: #1a4b8f;
@@ -328,7 +328,7 @@ button:hover {
   text-align: left;
 }
 
-/* النص */
+
 .sort-label {
   display: block;
   white-space: nowrap;
@@ -338,7 +338,7 @@ button:hover {
   color: #1a4b8f;
 }
 
-/* القائمة */
+
 .sort-select {
   display: block;
   width: 100%;             
@@ -402,7 +402,7 @@ button:hover {
 	font-size: 1rem;
 }
 
-/* السعر */
+
 .price-badge {
   background: #f1f1f1;
   color: #1a4b8f;
@@ -477,7 +477,7 @@ button:hover {
 	background: #2962c2;
 }
 
-/* العنوان + السعر بجنب بعض */
+
 .card-header {
   display: flex;
   justify-content: space-between;  
@@ -487,7 +487,7 @@ button:hover {
 }
 
 
-/* الاسم */
+
 .name-row {
   margin: 0;
   font-weight: bold;
@@ -537,10 +537,9 @@ button:hover {
   overflow-x: auto;
   padding: 15px 0;
 
-  /* هذي الحركة الأساسية */
-  width: 120%;          /* يزيد العرض ويجبر السكروول يطلع */
-  max-width: none;      /* إلغاء التحديد */
-
+  
+  width: 120%;          
+  max-width: none;     
   scrollbar-width: auto;
 }
 
@@ -561,7 +560,7 @@ button:hover {
   width: 280px;
 }
 
-/* الشريط الأزرق */
+
 .member-name-box {
   background-color: #0a4b9c;   
   color: white;
@@ -574,7 +573,7 @@ button:hover {
   background-color: #062c6d;
 }
 
-/* الاسم داخل الشريط */
+
 .member-name {
   margin: 0;
   font-size: 1.1rem;
@@ -583,7 +582,7 @@ button:hover {
 
 /* ----- Team Section ----- */
 
-/* ====== قسم الفريق ====== */
+
 
 
 .team-section {
@@ -619,7 +618,7 @@ button:hover {
   color: #0c468b;
 }
 
-/* الشبكة */
+
 .team-grid {/* 11111 */
   display: flex;
   flex-wrap: nowrap;
@@ -629,7 +628,7 @@ button:hover {
   overflow-x: auto;
 }
 
-/* البطاقة */
+
 .member-card {
   background: #fff;
   border: 1px solid #cce0ff;
@@ -644,7 +643,7 @@ button:hover {
   overflow: hidden;
 }
 
-/* الصورة */
+
 .thumb {
   width: 100%;
   height: 150px;
@@ -655,7 +654,7 @@ button:hover {
   margin-bottom: .5rem;
 }
 
-/* النص داخل البطاقة */
+
 .member-bio {
   font-size: 0.95rem;
   color: #000;
@@ -663,7 +662,7 @@ button:hover {
   text-align: center;
 }
 
-/* الرابط على الاسم */
+
 .member-bio a {
   display: block;                
   background-color: #0b3b8a;     
@@ -691,7 +690,7 @@ button:hover {
   margin: 1.5rem 0 1rem;
 }
 
-/* الهيكل العام للنموذج */
+
 .join-form {
   background: #f7f7f7;
   border: 1px solid #d4d4d4;
@@ -706,7 +705,7 @@ button:hover {
   gap: 1rem;                
 }
 
-/*  الهيكل العام للنوذج اضافه خدمه  */
+
 .addService-form {
   background-color: #f7f7f7;
   padding: 30px;
@@ -724,7 +723,7 @@ button:hover {
   gap: 10px;
 }
 
-/* كل label (النص + الحقل) */
+
 .join-form label , .addService-form label {
   display: flex;
   flex-direction: column;     
@@ -733,7 +732,7 @@ button:hover {
   color: #094b8f;
 }
 
-/* تنسيق الحقول */
+
 .join-form input,
 .join-form textarea,
 .addService-form input,
@@ -744,12 +743,11 @@ button:hover {
   background: #fff;
 }
 
-/* حقل الرسالة يأخذ عرض كامل */
 .join-form .full, .addService-form .full {
   flex: 0 0 100%;
 }
 
-/* الزر في المنتصف */
+
  .addService-form Button, .join-form Button {
   background-color: #0b3b8a;
   color: white;
@@ -1086,7 +1084,6 @@ button:hover {
   border: 1px solid #c8d7eb;
 }
 
-/* القوائم */
 .team-table ul {
   margin: 0;
   padding-left: 18px;
@@ -1097,7 +1094,6 @@ button:hover {
   line-height: 1.4;
 }
 
-/* قوائم فرعية داخل Skills & Education */
 .team-table .nested > li {
   font-weight: 600;
   color: #0c468b;
@@ -1110,7 +1106,6 @@ button:hover {
   font-weight: 400;
 }
 
-/* قوائم الخبرات البسيطة */
 .team-table .flat {
   list-style: disc;
   padding-left: 18px;
@@ -1133,7 +1128,6 @@ button:hover {
     border-bottom: 1px solid #ccc;
 }
 
-/* 4. المحتوى الرئيسي والعنوان (Main Content & Title) */
 main {
     flex-grow: 1;
     padding-top: 2rem;
@@ -1162,10 +1156,10 @@ main {
 }
 
 /* ---------------------------------------------------- */
-/* ⭐ تنسيقات خاصة بـ صفحة العميل (Customer) ⭐            */
-/* ---------------------------------------------------- */
+/* Custome            */
 
-/* تنسيقات قسم طلبات العميل (Service Requests) */
+
+
 .service-requests {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1173,7 +1167,7 @@ main {
     margin-bottom: 50px;
 }
 
-/* تنسيقات بطاقة الطلب (Request Card) */
+
 .request-card {
     background-color: #fff;
     padding: 10px;
@@ -1199,13 +1193,13 @@ main {
     font-weight: 600;
 }
 
-/* تنسيقات قسم الإجراءات (Actions) */
+
 .card-actions {
     margin-top: 10px;
     display: flex;
 }
 
-/* تنسيق الروابط (Reschedule) لتبدو كأزرار */
+
 .card-actions a {
     padding: 5px 15px;
     margin-right: 10px;
@@ -1219,7 +1213,7 @@ main {
     text-align: center;
 }
 
-/* تنسيق الأزرار (Statue) */
+
 .card-actions button {
     padding: 5px 15px;
     margin-right: 10px;
@@ -1230,7 +1224,7 @@ main {
     transition: opacity 0.2s, background-color 0.2s;
 }
 
-/* تنسيقات زر Reschedule */
+
 .btn-reschedule.active-reschedule {
     background-color: #d1fae5;
     color: #065f46;
@@ -1244,7 +1238,7 @@ main {
     pointer-events: none;
 }
 
-/* تنسيقات أزرار الحالات (Provided, Pending, Unload) */
+
 .card-actions button:not(.btn-reschedule) {
     cursor: default !important;
     pointer-events: none;
@@ -1252,7 +1246,7 @@ main {
     color: white;
 }
 
-/* تنسيقات لوحة التحكم (Dashboard Actions) */
+
 .dashboard-actions {
     display: flex;
     justify-content: center;
@@ -1276,9 +1270,9 @@ main {
 	    background-color: #222; 
 }
 
-/* ---------------------------------------------------- */
-/* ⭐ تنسيقات خاصة بنافذة تغيير الموعد (Reschedule Modal) ⭐     */
-/* ---------------------------------------------------- */
+
+/*   Reschedule     */
+
 
 .modal-overlay {
     display: none;
@@ -1293,7 +1287,7 @@ main {
     align-items: center;
 }
 
-/* التعديل: إظهار النافذة عند النقر على الرابط الذي يشير إلى ID النافذة */
+
 .modal-overlay:target {
     display: flex;
 }
@@ -1362,15 +1356,15 @@ main {
     font-weight: bold;
     margin-top: 1rem;
     transition: background-color 0.2s;
-    font-family: serif, Arial, sans-serif; /* توحيد الخط للعام */
+    font-family: serif, Arial, sans-serif; 
 }
 .reschedule-form button[type="submit"]:hover {
-    background-color: #222; /* توحيد تأثير التحويم لـ #222 */
+    background-color: #222; 
 }
 
-/* ---------------------------------------------------- */
-/*         تنسيقات خاصة بـ تقييم الخدمة (ServiceEvaultion)       */
-/* ---------------------------------------------------- */
+
+/*  (ServiceEvaultion)       */
+
 
 .evaluation-container {
     background-color: white;
@@ -1383,10 +1377,10 @@ main {
     position: relative;
     margin-top: 1rem;
     text-align: left;
-    margin: 0 auto; /* توسيط الحاوية أفقيًا */
+    margin: 0 auto; 
 }
 
-/* تنسيق زر الإغلاق (X) في صفحة التقييم كـ a */
+
 .evaluation-container .close-btn {
     position: absolute;
     top: 15px;
@@ -1402,14 +1396,14 @@ main {
     text-decoration: none;
 }
 
-/* تغميق العناوين (Labels) */
+
 .evaluation-form label {
     font-weight: bold;
     display: block;
     margin-bottom: 0.5rem;
 }
 
-/* تنسيق حقل الاختيار (Select) و (Textarea) */
+
 .evaluation-form select,
 .evaluation-form textarea {
     width: 100%;
@@ -1422,7 +1416,7 @@ main {
     resize: vertical;
 }
 
-/* تنسيق النجوم: أفقي من اليسار، التحديد أصفر */
+
 .rating-group {
     display: flex;
     flex-direction: column;
@@ -1440,17 +1434,17 @@ main {
     margin-top: 5px;
 }
 
-/* إخفاء أزرار الراديو (الدوائر الصغيرة) */
+
 .stars input {
     display: none;
 }
 
-/* نجوم (الـ Label) */
+
 .stars label {
     font-size: 2.5rem;
     color: transparent;
     float: none;
-    display: inline-block; /* لضمان ظهورها بشكل أفقي */
+    display: inline-block; 
     cursor: pointer;
     padding: 0 0.2rem;
     transition: color 0.3s;
